@@ -7,3 +7,6 @@ league_matchups_detailed.csv
 requirements.txt
 graph_edges.csv
 graph_nodes.csv
+.env
+__pycache__/
+*.pyc
