@@ -3,9 +3,6 @@ import os
 from neo4j import GraphDatabase
 from dotenv import load_dotenv
 from schemas import ChampionGraphData
-from google import genai
-import time
-from google.genai.errors import ServerError
 
 load_dotenv()
 neo4j_uri = os.getenv("NEO4J_URI")

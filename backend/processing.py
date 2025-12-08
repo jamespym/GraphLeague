@@ -75,6 +75,7 @@ for champion_id, champion_raw_data in input_json["data"].items():
                 contents=prompt,
                 config={"response_mime_type": "application/json",
                         "response_json_schema": ChampionGraphData.model_json_schema(),
+                        "temperature": 1.0
                 }
             )
             break # Success, exit retry loop
