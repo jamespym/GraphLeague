@@ -11,11 +11,12 @@ StrategicMechanic = Literal[
     "True Sight",         # TF R
     "Invisibility",       # Akali
     "High Mobility",      # Yasuo, Irelia
-    "Anti-Dash",          # Poppy W (Grounding)
+    "Anti-Dash",          # Poppy W
     "Unstoppable",        # Olaf R
     "Percent HP Dmg",     # Vayne
     "Knock Up",           # Yasuo Synergy
     "Anti-Auto Attack"    # Teemo, Jax
+    
 ]
 
 ValidPosition = Literal["Top", "Jungle", "Mid", "Bot", "Support"]
@@ -23,7 +24,7 @@ ValidPosition = Literal["Top", "Jungle", "Mid", "Bot", "Support"]
 class Relationship(BaseModel):
     source: str
     target: Union[StrategicMechanic, ValidPosition] # The Target
-    relation_type: Literal["PLAYS_IN", "HAS_MECHANIC", "WEAK_TO", "APPLIES_EFFECT"]
+    relation_type: Literal["PLAYS_IN", "HAS_MECHANIC", "WEAK_TO"]
     reasoning: str = Field(..., description="E.g. 'Wind Wall blocks projectiles'")
 
 class ChampionGraphData(BaseModel):

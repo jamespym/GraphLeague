@@ -1,62 +1,85 @@
 import json
 import os
+from neo4j import GraphDatabase
 from dotenv import load_dotenv
 from schemas import ChampionGraphData
 from google import genai
+import time
+from google.genai.errors import ServerError
 
 load_dotenv()
-client = genai.Client()
+neo4j_uri = os.getenv("NEO4J_URI")
+neo4j_user = os.getenv("NEO4J_USER")
+neo4j_pw = os.getenv("NEO4J_PASSWORD")
 
-# load json
-with open('backend/champions.json', 'r', encoding='utf-8') as f:
-    input_json = json.load(f)
+print(neo4j_pw, neo4j_uri, neo4j_user)
+
+driver = GraphDatabase.driver(neo4j_uri, auth=(neo4j_user, neo4j_pw))
+
+class GraphInserter:
+    def __init__(self, uri, auth):
+        self.driver = GraphDatabase.driver(uri, auth=auth)
+        
+    def close(self):
+        self.driver.close()
+        
+    def insert_data(self, champions_list):
+        with self.driver.session() as session:
+            for champ_data in champions_list:
+                print(f'Processing {champ_data['champion_name']}...')
+                
+                # create Champion node
+                session.run(
+                    """
+                    MERGE (c:Champion {name: $name})
+                    SET c.primary_role = $role
+                    """,
+                    name=champ_data['champion_name'],
+                    role=champ_data['primary_role']
+                )
+                
+                # create other Nodes and Edges from Relationship list
+                for rel in champ_data['relationships']:
+                    self._create_relationship(session, champ_data['champion_name'], rel)
     
-counter = 0
-output_list = []
-for champion_id, champion_raw_data in input_json["data"].items():
-    logic_rules = """
-        MVP RULES OF ENGAGEMENT:
-        1. "Projectile Block" -> IF ability blocks/destroys missiles.
-        2. "Grievous Wounds" -> IF ability reduces healing.
-        3. "Shield Reave" -> IF ability destroys shields.
-        4. "Anti-Dash" -> IF ability stops movement/dashes within a set area.
-        5. "Unstoppable" -> IF champion ignores Crowd Control.
-        6. "Anti-Auto Attack" -> IF champion dodges or blinds attacks.
-        7. "High Sustain" -> IF champion's kit revolves around healing
+    def _create_relationship(self, session, source_name, rel_data):
+        target_name = rel_data['target']
+        rel_type = rel_data['relation_type']
+        reasoning = rel_data['reasoning']
 
-        LOGIC (WEAKNESSES):
-        - IF "High Sustain" -> Weak to "Grievous Wounds"
-        - IF "Shielding" -> Weak to "Shield Reave"
-        - IF "Projectile Reliant" -> Weak to "Projectile Block"
-        - IF "High Mobility" -> Weak to "Anti-Dash"
+        # 1. Determine Target Node Label
+        # If it's a "PLAYS_IN" relationship, the target is a Position.
+        # Otherwise, it's a Mechanic (Weakness, Strategy, etc).
+        if rel_type == "PLAYS_IN":
+            target_label = "Position"
+        else:
+            target_label = "Mechanic"
+
+        # 2. Run the Cypher Query
+        # This creates the Target Node (if it doesn't exist) AND the Edge
+        query = f"""
+        MATCH (c:Champion {{name: $source}})
+        MERGE (t:{target_label} {{name: $target}})
+        MERGE (c)-[r:{rel_type}]->(t)
+        SET r.reasoning = $reasoning
         """
-    
-    prompt = (
-        f"Based on the following raw data, extract the relationships into the required JSON schema, using only the provided vocabulary"
-        f"Champion raw data: {json.dumps(champion_raw_data)}"
-        f"{logic_rules}\n"
-        "Output valid JSON only. Do not output Python class constructors (e.g., do not write ChampionNode(...)). Output standard JSON objects (e.g., {'name': '...'})."
-    )
 
-    response = client.models.generate_content(
-        model="gemini-2.5-flash", 
-        contents=prompt,
-        config={"response_mime_type": "application/json",
-                "response_json_schema": ChampionGraphData.model_json_schema(),
-        }
-    )
-    
-    try:
-        data = json.loads(response.text)
-        output_list.append(ChampionGraphData(**data))
-        print(f"Successfully processed {champion_id}")
-    except json.JSONDecodeError as e:
-            print(f"Failed to process {champion_id}. Error: {e}")
-    
-    counter += 1
-    
-    if counter == 3: break
-    
+        session.run(
+            query,
+            source=source_name,
+            target=target_name,
+            reasoning=reasoning
+        )
+        
+with open('backend/processed_champions_v2.json', 'r') as f:
+    data = json.load(f)
 
-
-print(output_list)
+# 2. Run the Inserter
+inserter = GraphInserter(neo4j_uri, (neo4j_user, neo4j_pw))
+try:
+    inserter.insert_data(data)
+    print("✅ All data inserted!")
+except Exception as e:
+    print(f"❌ Error: {e}")
+finally:
+    inserter.close()
