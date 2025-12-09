@@ -73,4 +73,4 @@ class GraphRetriever:
         return matchup_data
         
 test = GraphRetriever()
-print(test.get_counter_picks("Akali"))
+print(test.get_counter_picks("Lulu"))

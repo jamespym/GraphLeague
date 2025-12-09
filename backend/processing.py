@@ -20,12 +20,24 @@ logic_rules = """
         1. "Projectile Block" -> IF ability blocks/destroys missiles.
         2. "Grievous Wounds" -> IF ability reduces healing.
         3. "Shield Reave" -> IF ability destroys shields.
-        4. "Anti-Dash" -> IF ability stops movement/dashes within a set area.
-        5. "Unstoppable" -> IF champion ignores Crowd Control.
-        6. "Anti-Auto Attack" -> IF champion dodges or blinds attacks.
-        7. "High Sustain" -> IF champion's kit revolves around healing (small/sparse instances of healing do not count)
-        8. "High Mobility" -> IF and only if champion's kit heavily revolves around dashes and movement speed (a single, long-cooldown dash is not sufficient to qualify)
-        9. "Shielding" -> IF champion heavily relies on shields
+        4. "Anti-Dash" -> IF ability specifically prevents the usage of movement abilities (Grounding effects) OR knocks down enemies mid-dash (Poppy W). 
+            - EXCLUDE: Generic Crowd Control (Stuns, Roots, Charms, Fears) that incidentally stop movement, or Walls
+            - Example: Poppy W is Anti-Dash. Ahri E (Charm) is NOT Anti-Dash.
+        5. "Unstoppable" -> IF champion has an ability that provides immunity to Crowd Control.
+            - EXCLUDE -> Generic Invulnerability/Stasis
+            - Example: Olaf R is Unstoppable. Bard R / Xayah R is NOT Unstoppable
+        6. "Cleanse" -> IF champion has an ability that removes a Crowd Control effect
+        7. "Anti-Auto Attack" -> IF champion dodges or blinds attacks.
+            - EXCLUDE -> Generic Invulnerability/Stasis
+            - Example: Shen W is Anti-Auto Attack. Taric R is NOT Anti-Auto Attack
+        8. "High Sustain" -> IF champion's kit revolves around healing.
+            - EXCLUDE Champions with only small/sparse instances of healing
+        9. "High Mobility" -> IF and only if champion's kit heavily revolves around dashes and movement speed 
+            - EXCLUDE Champions with single, long-cooldown dashes
+            - Example: Lillia, Katarina are classic High Mobility. Aatrox is High Mobility as his abiliities require dash. Gwen is NOT High Mobility.
+        10. "Shielding" -> IF champion heavily relies on shields.
+            - Example: Karma is Shielding. Jarvan IV is NOT Shielding
+        
 
         LOGIC (WEAKNESSES):
         - IF "High Sustain" -> Weak to "Grievous Wounds"
@@ -58,7 +70,7 @@ for champion_id, champion_raw_data in input_json["data"].items():
         continue
     
     prompt = (
-        f"Based on the following raw data, extract the relationships into the required JSON schema, using only the provided vocabulary"
+        f"You are a League of Legends gameplay and interaction expert. Based on the following raw data and rules, extract the relationships into the required JSON schema, using only the provided vocabulary"
         f"Champion raw data: {json.dumps(champion_raw_data)}"
         f"{logic_rules}\n"
         "Output valid JSON only. Do not output Python class constructors (e.g., do not write ChampionNode(...)). Output standard JSON objects (e.g., {'name': '...'})."
