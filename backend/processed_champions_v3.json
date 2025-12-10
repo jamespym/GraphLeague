@@ -1,0 +1,2528 @@
+[
+    {
+        "name": "Aatrox",
+        "archetype": "Diver",
+        "primary_position": [
+            "Top",
+            "Jungle"
+        ],
+        "mechanics": [
+            {
+                "name": "High Sustain",
+                "details": "Passive (Deathbringer Stance) heals Aatrox on his next basic attack. E (Umbral Dash) passively grants Omnivamp against champions. R (World Ender) significantly increases his self-healing."
+            },
+            {
+                "name": "Knock-upHigh Mobility",
+                "details": "Q (The Darkin Blade) knocks up enemies hit by the edge of the ability. E (Umbral Dash) provides a short-cooldown dash. R (World Ender) grants a significant burst of movement speed."
+            }
+        ]
+    },
+    {
+        "name": "Ahri",
+        "archetype": "Burst",
+        "primary_position": [
+            "Mid"
+        ],
+        "mechanics": [
+            {
+                "name": "Knock-upHigh Mobility",
+                "details": "R (Spirit Rush) allows Ahri to dash up to three times, providing high mobility for engaging, repositioning, and escaping."
+            }
+        ]
+    },
+    {
+        "name": "Akali",
+        "archetype": "Burst",
+        "primary_position": [
+            "Mid",
+            "Top"
+        ],
+        "mechanics": [
+            {
+                "name": "Invisibility",
+                "details": "W (Twilight Shroud) makes Akali invisible while inside the smoke cloud, making her untargetable by enemy spells and attacks."
+            },
+            {
+                "name": "Knock-upHigh Mobility",
+                "details": "W (Twilight Shroud) grants Move Speed, E (Shuriken Flip) allows two dashes, and R (Perfect Execution) provides two dashes, making her highly mobile."
+            }
+        ]
+    },
+    {
+        "name": "Akshan",
+        "archetype": "Marksman",
+        "primary_position": [
+            "Mid",
+            "Bot"
+        ],
+        "mechanics": [
+            {
+                "name": "Shielding",
+                "details": "Passive (Dirty Fighting) grants Akshan a shield every three hits from his attacks and abilities if the target was a champion."
+            },
+            {
+                "name": "Invisibility",
+                "details": "W (Going Rogue) allows Akshan to become Camouflaged, indefinitely while near a wall or in brush, or for a short duration otherwise."
+            }
+        ]
+    },
+    {
+        "name": "Alistar",
+        "archetype": "Vanguard",
+        "primary_position": [
+            "Support"
+        ],
+        "mechanics": [
+            {
+                "name": "Knock-upHigh Mobility",
+                "details": "Q (Pulverize) smashes the ground, knocking up nearby enemies."
+            },
+            {
+                "name": "Cleanse",
+                "details": "R (Unbreakable Will) immediately cleanses all disabling effects on Alistar."
+            }
+        ]
+    },
+    {
+        "name": "Amumu",
+        "archetype": "Vanguard",
+        "primary_position": [
+            "Jungle",
+            "Support"
+        ],
+        "mechanics": []
+    },
+    {
+        "name": "Anivia",
+        "archetype": "Artillery",
+        "primary_position": [
+            "Mid",
+            "Support"
+        ],
+        "mechanics": []
+    },
+    {
+        "name": "Annie",
+        "archetype": "Burst",
+        "primary_position": [
+            "Mid",
+            "Support"
+        ],
+        "mechanics": []
+    },
+    {
+        "name": "Aphelios",
+        "archetype": "Marksman",
+        "primary_position": [
+            "Bot"
+        ],
+        "mechanics": []
+    },
+    {
+        "name": "Ashe",
+        "archetype": "Marksman",
+        "primary_position": [
+            "Bot",
+            "Support"
+        ],
+        "mechanics": []
+    },
+    {
+        "name": "Aurelion Sol",
+        "archetype": "Artillery",
+        "primary_position": [
+            "Mid"
+        ],
+        "mechanics": [
+            {
+                "name": "Knock-upHigh Mobility",
+                "details": "R (Voice of Light) projects a blast of starfire that knocks back nearby enemies to his Outer Limit."
+            }
+        ]
+    },
+    {
+        "name": "Azir",
+        "archetype": "Battlemage",
+        "primary_position": [
+            "Mid"
+        ],
+        "mechanics": [
+            {
+                "name": "Knock-upHigh Mobility",
+                "details": "R (Emperor's Divide) summons a wall of soldiers that charges forward, knocking back enemies."
+            }
+        ]
+    },
+    {
+        "name": "Bard",
+        "archetype": "Catcher",
+        "primary_position": [
+            "Support"
+        ],
+        "mechanics": [
+            {
+                "name": "High Sustain",
+                "details": "W (Caretaker's Shrine) creates healing shrines that power up over time, providing significant health restoration to allies."
+            }
+        ]
+    },
+    {
+        "name": "Blitzcrank",
+        "archetype": "Catcher",
+        "primary_position": [
+            "Support"
+        ],
+        "mechanics": [
+            {
+                "name": "Shield Reave",
+                "details": "R (Static Field) destroys nearby enemies' shields upon activation."
+            },
+            {
+                "name": "Shielding",
+                "details": "Passive (Mana Barrier) grants Blitzcrank a shield based on his mana when he drops to low health."
+            }
+        ]
+    },
+    {
+        "name": "Brand",
+        "archetype": "Burst",
+        "primary_position": [
+            "Mid",
+            "Support"
+        ],
+        "mechanics": []
+    },
+    {
+        "name": "Braum",
+        "archetype": "Warden",
+        "primary_position": [
+            "Support"
+        ],
+        "mechanics": [
+            {
+                "name": "Projectile Block",
+                "details": "E (Unbreakable) raises Braum's shield, intercepting all incoming projectiles from a chosen direction, destroying them. The first missile blocked deals no damage, and subsequent ones deal reduced damage."
+            }
+        ]
+    },
+    {
+        "name": "Caitlyn",
+        "archetype": "Marksman",
+        "primary_position": [
+            "Bot"
+        ],
+        "mechanics": [
+            {
+                "name": "True Sight",
+                "details": "W (Yordle Snap Trap) grants True Sight of an enemy champion for 3 seconds when sprung. R (Ace in the Hole) grants True Sight of the target during its channel."
+            }
+        ]
+    },
+    {
+        "name": "Camille",
+        "archetype": "Diver",
+        "primary_position": [
+            "Top",
+            "Jungle"
+        ],
+        "mechanics": [
+            {
+                "name": "Shielding",
+                "details": "Passive (Adaptive Defenses) grants a shield against the damage type of the attacking champion after basic attacking them."
+            },
+            {
+                "name": "Knock-upHigh Mobility",
+                "details": "E (Hookshot) allows Camille to dash to a wall, then dash again, knocking up and stunning the first enemy champion hit. This ability is a core part of her high mobility."
+            }
+        ]
+    },
+    {
+        "name": "Cassiopeia",
+        "archetype": "Battlemage",
+        "primary_position": [
+            "Mid",
+            "Top"
+        ],
+        "mechanics": [
+            {
+                "name": "Anti-Dash",
+                "details": "W (Miasma) grounds enemies, preventing them from using movement abilities while inside the toxic clouds."
+            },
+            {
+                "name": "High Sustain",
+                "details": "E (Twin Fang) heals Cassiopeia for a percentage of the damage dealt to poisoned targets, allowing for significant sustain in prolonged fights."
+            }
+        ]
+    },
+    {
+        "name": "Cho'Gath",
+        "archetype": "Juggernaut",
+        "primary_position": [
+            "Top",
+            "Jungle",
+            "Mid"
+        ],
+        "mechanics": [
+            {
+                "name": "Knock-upHigh Mobility",
+                "details": "Q (Rupture) ruptures the ground, knocking up enemies in the area."
+            },
+            {
+                "name": "High Sustain",
+                "details": "Passive (Carnivore) restores Health and Mana whenever Cho'Gath kills a unit."
+            }
+        ]
+    },
+    {
+        "name": "Corki",
+        "archetype": "Marksman",
+        "primary_position": [
+            "Mid",
+            "Bot"
+        ],
+        "mechanics": [
+            {
+                "name": "True Sight",
+                "details": "Q (Phosphorus Bomb) reveals enemies in the target area for a duration."
+            },
+            {
+                "name": "Knock-upHigh Mobility",
+                "details": "W (Valkyrie) is a dash. With his passive, The Package, Valkyrie becomes an empowered, much longer-range dash that also grants significant movement speed and knocks aside enemies."
+            }
+        ]
+    },
+    {
+        "name": "Darius",
+        "archetype": "Juggernaut",
+        "primary_position": [
+            "Top"
+        ],
+        "mechanics": [
+            {
+                "name": "High Sustain",
+                "details": "Q (Decimate) heals Darius based on enemy champions and large jungle monsters hit by the blade."
+            }
+        ]
+    },
+    {
+        "name": "Diana",
+        "archetype": "Diver",
+        "primary_position": [
+            "Mid",
+            "Jungle"
+        ],
+        "mechanics": [
+            {
+                "name": "True Sight",
+                "details": "Q (Crescent Strike) afflicts enemies with Moonlight, revealing them if they are not stealthed."
+            },
+            {
+                "name": "Shielding",
+                "details": "W (Pale Cascade) grants Diana a temporary shield, which gains additional strength and refreshes duration if her third sphere detonates."
+            },
+            {
+                "name": "Knock-upHigh Mobility",
+                "details": "E (Lunar Rush) allows Diana to dash to an enemy. Its cooldown is refreshed if the target is afflicted with Moonlight, enabling multiple dashes."
+            }
+        ]
+    },
+    {
+        "name": "Draven",
+        "archetype": "Marksman",
+        "primary_position": [
+            "Bot"
+        ],
+        "mechanics": []
+    },
+    {
+        "name": "Dr. Mundo",
+        "archetype": "Juggernaut",
+        "primary_position": [
+            "Top",
+            "Jungle"
+        ],
+        "mechanics": [
+            {
+                "name": "Unstoppable",
+                "details": "Passive (Goes Where He Pleases) resists the first immobilizing effect that hits him, effectively making him immune to that instance of crowd control."
+            },
+            {
+                "name": "High Sustain",
+                "details": "Passive (Goes Where He Pleases) grants significantly increased health regeneration. Q (Infected Bonesaw) restores health on hit. W (Heart Zapper) stores damage as gray health and heals a portion back. R (Maximum Dosage) instantly heals a percentage of missing health and regenerates a large amount of maximum health over time."
+            }
+        ]
+    },
+    {
+        "name": "Ekko",
+        "archetype": "Burst",
+        "primary_position": [
+            "Mid",
+            "Jungle"
+        ],
+        "mechanics": [
+            {
+                "name": "High Sustain",
+                "details": "R (Chronobreak) heals Ekko for a percentage of health lost over the last 4 seconds, allowing for significant health recovery after engaging or taking damage."
+            },
+            {
+                "name": "Shielding",
+                "details": "W (Parallel Convergence) grants Ekko a shield if he enters the anomaly zone."
+            },
+            {
+                "name": "Knock-upHigh Mobility",
+                "details": "E (Phase Dive) allows Ekko to dash and then blink to his target with his next attack. His passive (Z-Drive Resonance) also grants a burst of movement speed upon proccing it on an enemy champion."
+            }
+        ]
+    },
+    {
+        "name": "Elise",
+        "archetype": "Diver",
+        "primary_position": [
+            "Jungle"
+        ],
+        "mechanics": [
+            {
+                "name": "True Sight",
+                "details": "E (Cocoon) stuns the first enemy hit and reveals them if they are not stealthed."
+            }
+        ]
+    },
+    {
+        "name": "Evelynn",
+        "archetype": "Burst",
+        "primary_position": [
+            "Jungle"
+        ],
+        "mechanics": [
+            {
+                "name": "High Sustain",
+                "details": "Passive (Demon Shade) heals Evelynn when she is low on health while out of combat."
+            },
+            {
+                "name": "Invisibility",
+                "details": "Passive (Demon Shade) grants Camouflage after level 6, making her undetectable unless very close to enemies or revealed by True Sight."
+            }
+        ]
+    },
+    {
+        "name": "Ezreal",
+        "archetype": "Marksman",
+        "primary_position": [
+            "Bot"
+        ],
+        "mechanics": []
+    },
+    {
+        "name": "Fiddlesticks",
+        "archetype": "Catcher",
+        "primary_position": [
+            "Jungle"
+        ],
+        "mechanics": [
+            {
+                "name": "High Sustain",
+                "details": "W (Bountiful Harvest) drains health from nearby enemies, healing Fiddlesticks for a percentage of the damage dealt."
+            }
+        ]
+    },
+    {
+        "name": "Fiora",
+        "archetype": "Diver",
+        "primary_position": [
+            "Top"
+        ],
+        "mechanics": [
+            {
+                "name": "High Sustain",
+                "details": "R (Grand Challenge) provides significant healing to Fiora and nearby allies if all Vitals are struck or the target dies after at least one Vital is hit."
+            },
+            {
+                "name": "Projectile Block",
+                "details": "W (Riposte) parries all incoming damage and disables for a short time, including projectiles."
+            },
+            {
+                "name": "Unstoppable",
+                "details": "W (Riposte) makes Fiora immune to all incoming disables for a short duration."
+            },
+            {
+                "name": "Anti-Auto Attack",
+                "details": "W (Riposte) parries all incoming damage, including auto attacks, for a short duration."
+            },
+            {
+                "name": "Knock-upHigh Mobility",
+                "details": "Passive (Duelist's Dance) grants movement speed when hitting Vitals, and Q (Lunge) is a short-range dash with cooldown reduction on hit."
+            }
+        ]
+    },
+    {
+        "name": "Fizz",
+        "archetype": "Burst",
+        "primary_position": [
+            "Mid"
+        ],
+        "mechanics": [
+            {
+                "name": "Knock-upHigh Mobility",
+                "details": "E (Playful / Trickster) allows Fizz to hop twice, making him untargetable and providing significant repositioning. Q (Urchin Strike) is a dash. R (Chum the Waters) knocks up the primary target."
+            },
+            {
+                "name": "True Sight",
+                "details": "R (Chum the Waters) applies True Sight to the target hit by the fish."
+            }
+        ]
+    },
+    {
+        "name": "Galio",
+        "archetype": "Vanguard",
+        "primary_position": [
+            "Mid",
+            "Support"
+        ],
+        "mechanics": [
+            {
+                "name": "Shielding",
+                "details": "W (Shield of Durand) passive grants Galio a magic shield after not taking damage. R (Hero's Entrance) grants allied champions in the area a magic shield."
+            },
+            {
+                "name": "Knock-upHigh Mobility",
+                "details": "E (Justice Punch) causes Galio to dash forward, knocking up the first enemy champion hit. R (Hero's Entrance) allows Galio to fly to an allied champion's location, knocking up enemies upon landing."
+            }
+        ]
+    },
+    {
+        "name": "Gangplank",
+        "archetype": "Burst",
+        "primary_position": [
+            "Top",
+            "Mid"
+        ],
+        "mechanics": [
+            {
+                "name": "Cleanse",
+                "details": "W (Remove Scurvy) removes all disabling effects."
+            }
+        ]
+    },
+    {
+        "name": "Garen",
+        "archetype": "Juggernaut",
+        "primary_position": [
+            "Top"
+        ],
+        "mechanics": [
+            {
+                "name": "High Sustain",
+                "details": "Passive (Perseverance) allows Garen to regenerate a percentage of his total health per second if he has not recently taken damage."
+            },
+            {
+                "name": "Cleanse",
+                "details": "Q (Decisive Strike) removes all slowing effects affecting Garen upon activation."
+            }
+        ]
+    },
+    {
+        "name": "Gnar",
+        "archetype": "Vanguard",
+        "primary_position": [
+            "Top"
+        ],
+        "mechanics": [
+            {
+                "name": "Knock-upHigh Mobility",
+                "details": "Mini Gnar's E (Hop) allows him to leap and bounce off units for extended mobility, and his W/R passive grants movement speed. Mega Gnar's R (GNAR!) knocks back enemies, stunning them if they hit a wall."
+            }
+        ]
+    },
+    {
+        "name": "Gragas",
+        "archetype": "Vanguard",
+        "primary_position": [
+            "Jungle",
+            "Top",
+            "Mid"
+        ],
+        "mechanics": [
+            {
+                "name": "Knock-upHigh Mobility",
+                "details": "E (Body Slam) allows Gragas to dash, knocking up the first enemy he collides with. R (Explosive Cask) knocks away enemies from the impact zone."
+            }
+        ]
+    },
+    {
+        "name": "Graves",
+        "archetype": "Burst",
+        "primary_position": [
+            "Jungle"
+        ],
+        "mechanics": [
+            {
+                "name": "Knock-upHigh Mobility",
+                "details": "E (Quickdraw) is a dash that can be frequently reset by basic attacks, allowing for high mobility and repositioning in combat. His passive (New Destiny) also provides a knock-back on non-champion units."
+            }
+        ]
+    },
+    {
+        "name": "Gwen",
+        "archetype": "Diver",
+        "primary_position": [
+            "Top",
+            "Jungle"
+        ],
+        "mechanics": [
+            {
+                "name": "High Sustain",
+                "details": "Passive (A Thousand Cuts) heals Gwen for a portion of the magic damage dealt to champions by her attacks and abilities."
+            }
+        ]
+    },
+    {
+        "name": "Hecarim",
+        "archetype": "Diver",
+        "primary_position": [
+            "Jungle"
+        ],
+        "mechanics": [
+            {
+                "name": "High Sustain",
+                "details": "W (Spirit of Dread) allows Hecarim to heal for a percentage of damage dealt to enemies within its radius by himself and his allies."
+            },
+            {
+                "name": "Knock-upHigh Mobility",
+                "details": "E (Devastating Charge) grants Hecarim significant movement speed and ghosting, allowing him to charge enemies and knock them back. R (Onslaught of Shadows) is a long-range dash that fears enemies."
+            }
+        ]
+    },
+    {
+        "name": "Heimerdinger",
+        "archetype": "Artillery",
+        "primary_position": [
+            "Mid",
+            "Top"
+        ],
+        "mechanics": []
+    },
+    {
+        "name": "Illaoi",
+        "archetype": "Juggernaut",
+        "primary_position": [
+            "Top"
+        ],
+        "mechanics": [
+            {
+                "name": "High Sustain",
+                "details": "Passive (Prophet of an Elder God) causes Tentacles to heal Illaoi when they damage a champion."
+            }
+        ]
+    },
+    {
+        "name": "Irelia",
+        "archetype": "Diver",
+        "primary_position": [
+            "Top",
+            "Mid"
+        ],
+        "mechanics": [
+            {
+                "name": "High Sustain",
+                "details": "Q (Bladesurge) heals Irelia when she dashes to and strikes a target."
+            },
+            {
+                "name": "Knock-upHigh Mobility",
+                "details": "Q (Bladesurge) allows Irelia to dash to enemies, refreshing its cooldown if the target is marked or dies, enabling multiple rapid dashes."
+            },
+            {
+                "name": "Unstoppable",
+                "details": "W (Defiant Dance) makes Irelia immune to crowd control during its charge duration."
+            }
+        ]
+    },
+    {
+        "name": "Ivern",
+        "archetype": "Enchanter",
+        "primary_position": [
+            "Jungle"
+        ],
+        "mechanics": [
+            {
+                "name": "Shielding",
+                "details": "E (Triggerseed) grants a shield to an ally champion."
+            }
+        ]
+    },
+    {
+        "name": "Janna",
+        "archetype": "Enchanter",
+        "primary_position": [
+            "Support"
+        ],
+        "mechanics": [
+            {
+                "name": "Knock-upHigh Mobility",
+                "details": "Q (Howling Gale) knocks up enemies in its path. R (Monsoon) knocks back nearby enemies upon activation."
+            },
+            {
+                "name": "Shielding",
+                "details": "E (Eye of the Storm) grants an allied champion or turret a decaying shield."
+            }
+        ]
+    },
+    {
+        "name": "Jarvan IV",
+        "archetype": "Diver",
+        "primary_position": [
+            "Jungle",
+            "Top"
+        ],
+        "mechanics": [
+            {
+                "name": "Knock-upHigh Mobility",
+                "details": "Q (Dragon Strike) combined with E (Demacian Standard) allows Jarvan IV to dash to the standard, knocking up enemies in his path."
+            }
+        ]
+    },
+    {
+        "name": "Jax",
+        "archetype": "Diver",
+        "primary_position": [
+            "Top",
+            "Jungle"
+        ],
+        "mechanics": [
+            {
+                "name": "Anti-Auto Attack",
+                "details": "E (Counter Strike) allows Jax to dodge all incoming basic attacks for a short duration."
+            }
+        ]
+    },
+    {
+        "name": "Jayce",
+        "archetype": "Diver",
+        "primary_position": [
+            "Top",
+            "Mid"
+        ],
+        "mechanics": [
+            {
+                "name": "Knock-upHigh Mobility",
+                "details": "Passive (Hextech Capacitor) grants a burst of movement speed when Jayce swaps weapons. Q (To the Skies!) allows Jayce to leap to an enemy. E (Acceleration Gate) provides a movement speed buff to allies passing through it. E (Thundering Blow) in Hammer Form knocks back the target."
+            }
+        ]
+    },
+    {
+        "name": "Jhin",
+        "archetype": "Marksman",
+        "primary_position": [
+            "Bot"
+        ],
+        "mechanics": []
+    },
+    {
+        "name": "Jinx",
+        "archetype": "Marksman",
+        "primary_position": [
+            "Bot"
+        ],
+        "mechanics": [
+            {
+                "name": "True Sight",
+                "details": "W (Zap!) reveals the first enemy hit for a short duration."
+            }
+        ]
+    },
+    {
+        "name": "Kai'Sa",
+        "archetype": "Marksman",
+        "primary_position": [
+            "Bot"
+        ],
+        "mechanics": [
+            {
+                "name": "True Sight",
+                "details": "W (Void Seeker) grants True Sight of the first enemy hit."
+            },
+            {
+                "name": "Knock-upHigh Mobility",
+                "details": "E (Supercharge) grants a significant Move Speed boost and Ghosting. Evolved E also grants Invisibility. R (Killer Instinct) allows her to dash to a marked enemy."
+            },
+            {
+                "name": "Invisibility",
+                "details": "Evolved E (Supercharge) grants Invisibility for a short duration."
+            },
+            {
+                "name": "Shielding",
+                "details": "R (Killer Instinct) grants a shield upon dashing to an enemy champion."
+            }
+        ]
+    },
+    {
+        "name": "Kalista",
+        "archetype": "Marksman",
+        "primary_position": [
+            "Bot"
+        ],
+        "mechanics": [
+            {
+                "name": "Knock-upHigh Mobility",
+                "details": "Passive (Martial Poise) allows Kalista to lunge a short distance after every basic attack or Pierce (Q). R (Fate's Call) allows her Oathsworn ally to dash and knock back enemies."
+            }
+        ]
+    },
+    {
+        "name": "Karma",
+        "archetype": "Enchanter",
+        "primary_position": [
+            "Support",
+            "Mid"
+        ],
+        "mechanics": [
+            {
+                "name": "Shielding",
+                "details": "E (Inspire) grants a protective shield to an allied champion, and Mantra E strengthens the shield while applying it to nearby allied champions."
+            },
+            {
+                "name": "True Sight",
+                "details": "W (Focused Resolve) reveals the tethered enemy for 2 seconds."
+            }
+        ]
+    },
+    {
+        "name": "Karthus",
+        "archetype": "Battlemage",
+        "primary_position": [
+            "Jungle",
+            "Mid"
+        ],
+        "mechanics": []
+    },
+    {
+        "name": "Kassadin",
+        "archetype": "Burst",
+        "primary_position": [
+            "Mid"
+        ],
+        "mechanics": [
+            {
+                "name": "Shielding",
+                "details": "Q (Null Sphere) grants a temporary magic damage shield."
+            },
+            {
+                "name": "Knock-upHigh Mobility",
+                "details": "R (Riftwalk) is a low-cooldown blink that allows for rapid repositioning and high mobility."
+            }
+        ]
+    },
+    {
+        "name": "Katarina",
+        "archetype": "Burst",
+        "primary_position": [
+            "Mid"
+        ],
+        "mechanics": [
+            {
+                "name": "Grievous Wounds",
+                "details": "R (Death Lotus) applies Grievous Wounds to enemies hit, reducing their healing."
+            },
+            {
+                "name": "Knock-upHigh Mobility",
+                "details": "E (Shunpo) allows Katarina to blink to targets, and its cooldown is significantly reduced by picking up daggers (from Q and W) and by her passive (Voracity) on enemy champion takedowns, enabling rapid repositioning and engagement."
+            }
+        ]
+    },
+    {
+        "name": "Kayle",
+        "archetype": "Marksman",
+        "primary_position": [
+            "Top",
+            "Mid"
+        ],
+        "mechanics": []
+    },
+    {
+        "name": "Kayn",
+        "archetype": "Diver",
+        "primary_position": [
+            "Jungle"
+        ],
+        "mechanics": [
+            {
+                "name": "High Sustain",
+                "details": "Passive (Darkin form) heals for a percentage of spell damage dealt to champions. R (Umbral Trespass) in Darkin form also heals for a percentage of damage dealt."
+            },
+            {
+                "name": "Knock-upHigh Mobility",
+                "details": "W (Blade's Reach) in Darkin Slayer form knocks up enemies hit."
+            },
+            {
+                "name": "High Sustain",
+                "details": "E (Shadow Step) allows Kayn to move through terrain and grants bonus movement speed, which is further enhanced in Shadow Assassin form."
+            }
+        ]
+    },
+    {
+        "name": "Kennen",
+        "archetype": "Battlemage",
+        "primary_position": [
+            "Top",
+            "Mid"
+        ],
+        "mechanics": [
+            {
+                "name": "Knock-upHigh Mobility",
+                "details": "E (Lightning Rush) transforms Kennen into a ball of lightning, granting significant movement speed and allowing him to pass through units, which is crucial for engaging and repositioning."
+            }
+        ]
+    },
+    {
+        "name": "Kha'Zix",
+        "archetype": "Burst",
+        "primary_position": [
+            "Jungle"
+        ],
+        "mechanics": [
+            {
+                "name": "Invisibility",
+                "details": "R (Void Assault) makes Kha'Zix invisible for a short duration and can be recast, with evolved R increasing duration and granting an additional use."
+            },
+            {
+                "name": "Knock-upHigh Mobility",
+                "details": "E (Leap) allows Kha'Zix to dash to a target location, with evolved E resetting on champion takedowns. R (Void Assault) grants increased movement speed and invisibility for repositioning."
+            }
+        ]
+    },
+    {
+        "name": "Kindred",
+        "archetype": "Marksman",
+        "primary_position": [
+            "Jungle"
+        ],
+        "mechanics": [
+            {
+                "name": "High Sustain",
+                "details": "W (Wolf's Frenzy) passive allows Kindred's next attack to restore health based on missing health after gaining 100 stacks from moving and attacking."
+            },
+            {
+                "name": "Knock-upHigh Mobility",
+                "details": "Q (Dance of Arrows) allows Kindred to vault, providing a short dash. Its cooldown is significantly reduced while inside Wolf's Frenzy (W), enabling frequent dashes for kiting and repositioning."
+            }
+        ]
+    },
+    {
+        "name": "Kled",
+        "archetype": "Diver",
+        "primary_position": [
+            "Top"
+        ],
+        "mechanics": [
+            {
+                "name": "High Sustain",
+                "details": "Passive (Skaarl, the Cowardly Lizard) allows Kled to remount Skaarl, regaining a portion of Skaarl's health, effectively giving him a second health bar and significant combat sustain."
+            },
+            {
+                "name": "Grievous Wounds",
+                "details": "Q (Bear Trap on a Rope) applies Grievous Wounds for a short duration if the target is shackled and pulled."
+            },
+            {
+                "name": "Shielding",
+                "details": "R (Chaaaaaaaarge!!!) grants Kled a shield while charging and for 2 seconds after."
+            },
+            {
+                "name": "Knock-upHigh Mobility",
+                "details": "E (Jousting) provides two dashes if hitting a target, and R (Chaaaaaaaarge!!!) is a very long-range charge that knocks back the first enemy champion encountered."
+            }
+        ]
+    },
+    {
+        "name": "Kog'Maw",
+        "archetype": "Marksman",
+        "primary_position": [
+            "Bot"
+        ],
+        "mechanics": [
+            {
+                "name": "True Sight",
+                "details": "R (Living Artillery) reveals enemies hit for 2 seconds."
+            }
+        ]
+    },
+    {
+        "name": "LeBlanc",
+        "archetype": "Burst",
+        "primary_position": [
+            "Mid"
+        ],
+        "mechanics": [
+            {
+                "name": "Invisibility",
+                "details": "Passive (Mirror Image) makes LeBlanc invisible for 1 second when she drops below 40% health."
+            },
+            {
+                "name": "Knock-upHigh Mobility",
+                "details": "W (Distortion) allows LeBlanc to dash to a location and then reactivate to return to her starting point. R (Mimic) can replicate W for further mobility."
+            },
+            {
+                "name": "True Sight",
+                "details": "E (Ethereal Chains) grants True Sight on the first enemy hit."
+            }
+        ]
+    },
+    {
+        "name": "Lee Sin",
+        "archetype": "Diver",
+        "primary_position": [
+            "Jungle"
+        ],
+        "mechanics": [
+            {
+                "name": "True Sight",
+                "details": "Q (Sonic Wave) grants True Sight on the first enemy hit. E (Tempest) reveals enemy units hit by the shockwave."
+            },
+            {
+                "name": "Shielding",
+                "details": "W (Safeguard) shields Lee Sin and a target ally champion."
+            },
+            {
+                "name": "High Sustain",
+                "details": "W (Iron Will) grants Lee Sin Life Steal and Spell Vamp for 4 seconds."
+            },
+            {
+                "name": "Knock-upHigh Mobility",
+                "details": "Q (Resonating Strike) and W (Safeguard) allow Lee Sin to dash to targets. R (Dragon's Rage) knocks back an enemy champion and knocks up enemies they collide with."
+            }
+        ]
+    },
+    {
+        "name": "Leona",
+        "archetype": "Vanguard",
+        "primary_position": [
+            "Support"
+        ],
+        "mechanics": []
+    },
+    {
+        "name": "Lillia",
+        "archetype": "Battlemage",
+        "primary_position": [
+            "Jungle",
+            "Mid"
+        ],
+        "mechanics": [
+            {
+                "name": "Knock-upHigh Mobility",
+                "details": "Q (Blooming Blows) passively grants stacking Move Speed when hitting enemies with spells, allowing for significant kiting and repositioning."
+            }
+        ]
+    },
+    {
+        "name": "Lissandra",
+        "archetype": "Burst",
+        "primary_position": [
+            "Mid"
+        ],
+        "mechanics": []
+    },
+    {
+        "name": "Lucian",
+        "archetype": "Marksman",
+        "primary_position": [
+            "Bot",
+            "Mid"
+        ],
+        "mechanics": [
+            {
+                "name": "True Sight",
+                "details": "W (Ardent Blaze) briefly reveals enemies hit by the explosion."
+            }
+        ]
+    },
+    {
+        "name": "Lulu",
+        "archetype": "Enchanter",
+        "primary_position": [
+            "Support"
+        ],
+        "mechanics": [
+            {
+                "name": "Shielding",
+                "details": "E (Help, Pix!) grants a shield to an allied champion."
+            },
+            {
+                "name": "True Sight",
+                "details": "E (Help, Pix!) grants True Sight on an enemy champion it damages."
+            }
+        ]
+    },
+    {
+        "name": "Lux",
+        "archetype": "Artillery",
+        "primary_position": [
+            "Mid",
+            "Support"
+        ],
+        "mechanics": [
+            {
+                "name": "Shielding",
+                "details": "W (Prismatic Barrier) grants a shield to allies it passes through, and again on its return."
+            },
+            {
+                "name": "True Sight",
+                "details": "E (Lucent Singularity) reveals the area where it is cast, providing vision."
+            }
+        ]
+    },
+    {
+        "name": "Malphite",
+        "archetype": "Vanguard",
+        "primary_position": [
+            "Top",
+            "Support"
+        ],
+        "mechanics": [
+            {
+                "name": "Shielding",
+                "details": "Passive (Granite Shield) provides a shield that absorbs damage, recharging if Malphite has not been hit for a few seconds."
+            },
+            {
+                "name": "Unstoppable",
+                "details": "R (Unstoppable Force) makes Malphite unstoppable during his dash."
+            }
+        ]
+    },
+    {
+        "name": "Malzahar",
+        "archetype": "Catcher",
+        "primary_position": [
+            "Mid"
+        ],
+        "mechanics": [
+            {
+                "name": "Unstoppable",
+                "details": "Passive (Void Shift) grants crowd control immunity when he hasn't recently taken damage or been crowd controlled."
+            }
+        ]
+    },
+    {
+        "name": "Maokai",
+        "archetype": "Vanguard",
+        "primary_position": [
+            "Top",
+            "Jungle",
+            "Support"
+        ],
+        "mechanics": [
+            {
+                "name": "High Sustain",
+                "details": "Passive (Sap Magic) heals Maokai on basic attacks, with the cooldown significantly reduced each time he casts a spell or is struck by an enemy's spell, allowing for sustained tanking."
+            }
+        ]
+    },
+    {
+        "name": "Master Yi",
+        "archetype": "Diver",
+        "primary_position": [
+            "Jungle"
+        ],
+        "mechanics": [
+            {
+                "name": "High Sustain",
+                "details": "W (Meditate) restores a significant amount of Master Yi's health over a short duration, increased based on missing health."
+            },
+            {
+                "name": "Knock-upHigh Mobility",
+                "details": "Q (Alpha Strike) allows Master Yi to teleport to enemies, becoming untargetable during the dash. R (Highlander) grants a large burst of movement speed and attack speed, and makes him immune to slows, enabling him to chase targets effectively."
+            }
+        ]
+    },
+    {
+        "name": "Miss Fortune",
+        "archetype": "Marksman",
+        "primary_position": [
+            "Bot"
+        ],
+        "mechanics": [
+            {
+                "name": "High Sustain",
+                "details": "W (Strut) passively grants increasing movement speed out of combat and can be activated for a burst of movement speed, which is crucial for her kiting and positioning."
+            },
+            {
+                "name": "True Sight",
+                "details": "E (Make It Rain) reveals the targeted area, granting vision."
+            }
+        ]
+    },
+    {
+        "name": "Wukong",
+        "archetype": "Diver",
+        "primary_position": [
+            "Top",
+            "Jungle"
+        ],
+        "mechanics": [
+            {
+                "name": "Invisibility",
+                "details": "W (Warrior Trickster) makes Wukong invisible for a short duration while dashing."
+            },
+            {
+                "name": "Knock-upHigh Mobility",
+                "details": "R (Cyclone) knocks up enemies. E (Nimbus Strike) is a dash, W (Warrior Trickster) is a dash, and R (Cyclone) grants movement speed, providing high mobility for engagements and repositioning."
+            }
+        ]
+    },
+    {
+        "name": "Mordekaiser",
+        "archetype": "Juggernaut",
+        "primary_position": [
+            "Top",
+            "Jungle"
+        ],
+        "mechanics": [
+            {
+                "name": "High Sustain",
+                "details": "W (Indestructible) allows Mordekaiser to store damage taken and dealt as a shield, which can then be consumed to restore a significant portion of his health."
+            },
+            {
+                "name": "Shielding",
+                "details": "W (Indestructible) generates a substantial shield based on damage taken and dealt, crucial for his survivability in fights."
+            }
+        ]
+    },
+    {
+        "name": "Morgana",
+        "archetype": "Catcher",
+        "primary_position": [
+            "Support",
+            "Mid"
+        ],
+        "mechanics": [
+            {
+                "name": "Shielding",
+                "details": "E (Black Shield) grants an ally a magic shield."
+            },
+            {
+                "name": "Unstoppable",
+                "details": "E (Black Shield) prevents disabling and immobilizing effects on the shielded ally until it breaks."
+            }
+        ]
+    },
+    {
+        "name": "Nami",
+        "archetype": "Enchanter",
+        "primary_position": [
+            "Support"
+        ],
+        "mechanics": [
+            {
+                "name": "High Sustain",
+                "details": "W (Ebb and Flow) unleashes a stream of water that bounces between allied and enemy champions, healing allies."
+            }
+        ]
+    },
+    {
+        "name": "Nasus",
+        "archetype": "Juggernaut",
+        "primary_position": [
+            "Top"
+        ],
+        "mechanics": [
+            {
+                "name": "High Sustain",
+                "details": "Passive (Soul Eater) grants bonus Life Steal, allowing for significant healing."
+            },
+            {
+                "name": "Anti-Auto Attack",
+                "details": "W (Wither) significantly reduces an enemy champion's Attack Speed."
+            }
+        ]
+    },
+    {
+        "name": "Nautilus",
+        "archetype": "Vanguard",
+        "primary_position": [
+            "Support"
+        ],
+        "mechanics": [
+            {
+                "name": "Shielding",
+                "details": "W (Titan's Wrath) grants Nautilus a temporary shield that scales with his maximum health."
+            }
+        ]
+    },
+    {
+        "name": "Neeko",
+        "archetype": "Burst",
+        "primary_position": [
+            "Mid",
+            "Support"
+        ],
+        "mechanics": [
+            {
+                "name": "Invisibility",
+                "details": "W (Shapesplitter) makes Neeko invisible for a short duration."
+            },
+            {
+                "name": "Shielding",
+                "details": "R (Pop Blossom) grants Neeko a shield during its preparation."
+            }
+        ]
+    },
+    {
+        "name": "Nidalee",
+        "archetype": "Diver",
+        "primary_position": [
+            "Jungle"
+        ],
+        "mechanics": [
+            {
+                "name": "High Sustain",
+                "details": "E (Primal Surge) in human form heals Nidalee and allies, with healing increasing based on missing health."
+            },
+            {
+                "name": "True Sight",
+                "details": "Passive (Prowl) grants True Sight on enemies marked as 'Hunted' by Javelin Toss or Bushwhack."
+            },
+            {
+                "name": "Knock-upHigh Mobility",
+                "details": "Passive (Prowl) grants increased movement speed in brush and towards 'Hunted' targets. W (Pounce) in cougar form is a short-range dash."
+            }
+        ]
+    },
+    {
+        "name": "Nocturne",
+        "archetype": "Diver",
+        "primary_position": [
+            "Jungle"
+        ],
+        "mechanics": [
+            {
+                "name": "Projectile Block",
+                "details": "W (Shroud of Darkness) creates a shadow barrier that blocks the next incoming enemy ability."
+            }
+        ]
+    },
+    {
+        "name": "Nunu & Willump",
+        "archetype": "Vanguard",
+        "primary_position": [
+            "Jungle"
+        ],
+        "mechanics": [
+            {
+                "name": "High Sustain",
+                "details": "Q (Consume) allows Nunu to bite an enemy, minion, or monster, dealing damage and healing himself significantly, with increased healing at low health."
+            },
+            {
+                "name": "Knock-upHigh Mobility",
+                "details": "W (Biggest Snowball Ever!) allows Nunu to roll a snowball that grows in size and speed, providing high mobility and knocking up enemies on collision."
+            }
+        ]
+    },
+    {
+        "name": "Olaf",
+        "archetype": "Juggernaut",
+        "primary_position": [
+            "Jungle",
+            "Top"
+        ],
+        "mechanics": [
+            {
+                "name": "Unstoppable",
+                "details": "R (Ragnarok) makes Olaf immune to all immobilizing and disabling effects for a duration."
+            },
+            {
+                "name": "Cleanse",
+                "details": "R (Ragnarok) removes all immobilizing and disabling effects upon activation."
+            },
+            {
+                "name": "High Sustain",
+                "details": "W (Vicious Strikes) grants Life Steal and increased healing from all sources based on missing Health."
+            }
+        ]
+    },
+    {
+        "name": "Orianna",
+        "archetype": "Burst",
+        "primary_position": [
+            "Mid"
+        ],
+        "mechanics": [
+            {
+                "name": "Shielding",
+                "details": "E (Command: Protect) shields an allied champion and grants them bonus Armor and Magic Resist."
+            },
+            {
+                "name": "Knock-upHigh Mobility",
+                "details": "R (Command: Shockwave) launches nearby enemies towards the Ball."
+            }
+        ]
+    },
+    {
+        "name": "Ornn",
+        "archetype": "Vanguard",
+        "primary_position": [
+            "Top",
+            "Support"
+        ],
+        "mechanics": [
+            {
+                "name": "Unstoppable",
+                "details": "W (Bellows Breath) makes Ornn unstoppable while he breathes fire."
+            }
+        ]
+    },
+    {
+        "name": "Pantheon",
+        "archetype": "Diver",
+        "primary_position": [
+            "Top",
+            "Jungle",
+            "Mid"
+        ],
+        "mechanics": [
+            {
+                "name": "Projectile Block",
+                "details": "E (Aegis Assault) makes Pantheon immune to non-tower damage from the front for its duration, blocking all incoming projectiles from that direction."
+            },
+            {
+                "name": "Anti-Auto Attack",
+                "details": "E (Aegis Assault) makes Pantheon immune to non-tower damage from the front for its duration, effectively blocking all auto-attacks from that direction."
+            }
+        ]
+    },
+    {
+        "name": "Poppy",
+        "archetype": "Vanguard",
+        "primary_position": [
+            "Top",
+            "Jungle",
+            "Support"
+        ],
+        "mechanics": [
+            {
+                "name": "Shielding",
+                "details": "Passive (Iron Ambassador) grants a temporary shield when Poppy picks up her buckler after throwing it."
+            },
+            {
+                "name": "Anti-Dash",
+                "details": "W (Steadfast Presence) creates a field around Poppy that stops enemy dashes, grounding and slowing them."
+            },
+            {
+                "name": "Knock-upHigh Mobility",
+                "details": "R (Keeper's Verdict) delivers an uncharged swing that knocks up enemies for a short duration."
+            }
+        ]
+    },
+    {
+        "name": "Pyke",
+        "archetype": "Catcher",
+        "primary_position": [
+            "Support"
+        ],
+        "mechanics": [
+            {
+                "name": "High Sustain",
+                "details": "Passive (Gift of the Drowned Ones) regenerates a significant portion of damage taken from champions when Pyke is hidden from enemies."
+            },
+            {
+                "name": "Invisibility",
+                "details": "W (Ghostwater Dive) grants Pyke Camouflage, making him invisible to enemies outside a certain range."
+            },
+            {
+                "name": "Knock-upHigh Mobility",
+                "details": "W (Ghostwater Dive) grants significant decaying movement speed, and E (Phantom Undertow) is a dash, providing high mobility for engages and escapes."
+            }
+        ]
+    },
+    {
+        "name": "Qiyana",
+        "archetype": "Burst",
+        "primary_position": [
+            "Mid",
+            "Jungle"
+        ],
+        "mechanics": [
+            {
+                "name": "Invisibility",
+                "details": "Q (Elemental Wrath / Edge of Ixtal) with Wild Enchantment leaves a trail that turns Qiyana Invisible."
+            },
+            {
+                "name": "Knock-upHigh Mobility",
+                "details": "W (Terrashape) and E (Audacity) provide high mobility through dashes. R (Supreme Display of Talent) launches a shockwave that Knocks Back enemies."
+            }
+        ]
+    },
+    {
+        "name": "Quinn",
+        "archetype": "Marksman",
+        "primary_position": [
+            "Top",
+            "Mid"
+        ],
+        "mechanics": [
+            {
+                "name": "Anti-Auto Attack",
+                "details": "Q (Blinding Assault) disarms non-champion targets, preventing them from basic attacking."
+            },
+            {
+                "name": "True Sight",
+                "details": "W (Heightened Senses) active reveals a large area, granting true sight of enemies within it."
+            },
+            {
+                "name": "Knock-upHigh Mobility",
+                "details": "E (Vault) is a dash that allows Quinn to quickly engage or disengage, and R (Behind Enemy Lines) grants immense movement speed for rapid map traversal."
+            }
+        ]
+    },
+    {
+        "name": "Rakan",
+        "archetype": "Enchanter",
+        "primary_position": [
+            "Support"
+        ],
+        "mechanics": [
+            {
+                "name": "Shielding",
+                "details": "P (Fey Feathers) periodically grants Rakan a shield. E (Battle Dance) shields an allied champion."
+            },
+            {
+                "name": "High Sustain",
+                "details": "Q (Gleaming Quill) heals Rakan and nearby allies if it hits a champion or epic monster."
+            },
+            {
+                "name": "Knock-upHigh Mobility",
+                "details": "W (Grand Entrance) is a dash that knocks up enemies. E (Battle Dance) allows two quick dashes to allied champions. R (The Quickness) grants a significant movement speed boost."
+            }
+        ]
+    },
+    {
+        "name": "Rammus",
+        "archetype": "Vanguard",
+        "primary_position": [
+            "Jungle"
+        ],
+        "mechanics": [
+            {
+                "name": "Knock-upHigh Mobility",
+                "details": "Q (Powerball) grants Rammus significant movement speed, allowing him to rapidly close distances. R (Soaring Slam), when cast during Powerball, knocks up enemies in the center of the impact zone."
+            }
+        ]
+    },
+    {
+        "name": "Rek'Sai",
+        "archetype": "Diver",
+        "primary_position": [
+            "Jungle"
+        ],
+        "mechanics": [
+            {
+                "name": "High Sustain",
+                "details": "Passive (Fury of the Xer'Sai) allows Rek'Sai to consume Fury while Burrowed to restore health."
+            },
+            {
+                "name": "Knock-upHigh Mobility",
+                "details": "W (Un-burrow) knocks up nearby enemies. W (Burrow) grants increased Move Speed, and E (Tunnel) creates reusable tunnels, providing high mobility."
+            },
+            {
+                "name": "Unstoppable",
+                "details": "R (Void Rush) makes Rek'Sai unstoppable during her leap towards a marked target."
+            }
+        ]
+    },
+    {
+        "name": "Rell",
+        "archetype": "Vanguard",
+        "primary_position": [
+            "Support"
+        ],
+        "mechanics": [
+            {
+                "name": "Shield Reave",
+                "details": "Q (Shattering Strike) destroys all incoming Shields."
+            },
+            {
+                "name": "Shielding",
+                "details": "W (Ferromancy: Crash Down) grants Rell a large shield upon dismounting."
+            }
+        ]
+    },
+    {
+        "name": "Renata Glasc",
+        "archetype": "Catcher",
+        "primary_position": [
+            "Support"
+        ],
+        "mechanics": [
+            {
+                "name": "Shielding",
+                "details": "E (Loyalty Program) sends out missiles that shield allies hit."
+            }
+        ]
+    },
+    {
+        "name": "Renekton",
+        "archetype": "Diver",
+        "primary_position": [
+            "Top"
+        ],
+        "mechanics": [
+            {
+                "name": "High Sustain",
+                "details": "Q (Cull the Meek) heals Renekton for a portion of the damage dealt, significantly increased when empowered by Fury."
+            },
+            {
+                "name": "Shield Reave",
+                "details": "W (Ruthless Predator), when empowered by Fury, attacks three times and explicitly destroys damage shields on the target before dealing damage and stunning."
+            }
+        ]
+    },
+    {
+        "name": "Rengar",
+        "archetype": "Burst",
+        "primary_position": [
+            "Jungle",
+            "Top"
+        ],
+        "mechanics": [
+            {
+                "name": "High Sustain",
+                "details": "W (Battle Roar) heals Rengar for a percentage of damage taken in the last 1.5 seconds, significantly increasing his survivability in prolonged fights or after taking burst damage."
+            },
+            {
+                "name": "Cleanse",
+                "details": "Empowered W (Battle Roar) cleanses Rengar of crowd control effects."
+            },
+            {
+                "name": "Invisibility",
+                "details": "R (Thrill of the Hunt) grants Rengar Camouflage, making him invisible to enemies outside of a certain radius."
+            },
+            {
+                "name": "True Sight",
+                "details": "R (Thrill of the Hunt) grants Rengar True Sight of the nearest enemy champion in a large radius around him."
+            }
+        ]
+    },
+    {
+        "name": "Riven",
+        "archetype": "Diver",
+        "primary_position": [
+            "Top",
+            "Jungle"
+        ],
+        "mechanics": [
+            {
+                "name": "Knock-upHigh Mobility",
+                "details": "Q (Broken Wings) provides three dashes, with the third cast knocking up enemies. E (Valor) provides an additional dash."
+            },
+            {
+                "name": "Shielding",
+                "details": "E (Valor) grants a shield for a short duration."
+            }
+        ]
+    },
+    {
+        "name": "Rumble",
+        "archetype": "Battlemage",
+        "primary_position": [
+            "Top",
+            "Jungle"
+        ],
+        "mechanics": [
+            {
+                "name": "Shielding",
+                "details": "W (Scrap Shield) grants Rumble a temporary shield, with increased strength while in Danger Zone."
+            }
+        ]
+    },
+    {
+        "name": "Ryze",
+        "archetype": "Battlemage",
+        "primary_position": [
+            "Mid",
+            "Top"
+        ],
+        "mechanics": []
+    },
+    {
+        "name": "Samira",
+        "archetype": "Marksman",
+        "primary_position": [
+            "Bot"
+        ],
+        "mechanics": [
+            {
+                "name": "Projectile Block",
+                "details": "W (Blade Whirl) destroys any enemy missiles that enter the area."
+            },
+            {
+                "name": "Knock-upHigh Mobility",
+                "details": "E (Wild Rush) allows Samira to dash through enemies with a cooldown reset on champion takedowns. Her passive (Daredevil Impulse) also allows her to dash to immobilized enemies."
+            }
+        ]
+    },
+    {
+        "name": "Sejuani",
+        "archetype": "Vanguard",
+        "primary_position": [
+            "Jungle"
+        ],
+        "mechanics": [
+            {
+                "name": "Unstoppable",
+                "details": "Passive (Frost Armor) grants immunity to slows after being out of combat, which persists for a short time after taking damage."
+            },
+            {
+                "name": "Knock-upHigh Mobility",
+                "details": "Q (Arctic Assault) allows Sejuani to charge forward, knocking enemies into the air."
+            }
+        ]
+    },
+    {
+        "name": "Senna",
+        "archetype": "Enchanter",
+        "primary_position": [
+            "Support",
+            "Bot"
+        ],
+        "mechanics": [
+            {
+                "name": "High Sustain",
+                "details": "Q (Piercing Darkness) heals allies, contributing to sustained presence."
+            },
+            {
+                "name": "Invisibility",
+                "details": "E (Curse of the Black Mist) grants camouflage to Senna and her allies, making them unselectable and hiding their identities."
+            },
+            {
+                "name": "Shielding",
+                "details": "R (Dawning Shadow) provides a global shield to allied champions caught in its wider area."
+            }
+        ]
+    },
+    {
+        "name": "Seraphine",
+        "archetype": "Enchanter",
+        "primary_position": [
+            "Support",
+            "Mid"
+        ],
+        "mechanics": [
+            {
+                "name": "Shielding",
+                "details": "W (Surround Sound) grants a shield to Seraphine and nearby allied champions."
+            },
+            {
+                "name": "High Sustain",
+                "details": "W (Surround Sound) restores missing Health to nearby allied champions if Seraphine is already shielded."
+            }
+        ]
+    },
+    {
+        "name": "Sett",
+        "archetype": "Juggernaut",
+        "primary_position": [
+            "Top"
+        ],
+        "mechanics": [
+            {
+                "name": "High Sustain",
+                "details": "Passive (Pit Grit) grants increased health regeneration based on missing health."
+            },
+            {
+                "name": "Shielding",
+                "details": "W (Haymaker) grants a shield based on stored Grit (damage taken)."
+            }
+        ]
+    },
+    {
+        "name": "Shaco",
+        "archetype": "Burst",
+        "primary_position": [
+            "Jungle",
+            "Support"
+        ],
+        "mechanics": [
+            {
+                "name": "Invisibility",
+                "details": "Q (Deceive) makes Shaco invisible and teleports him to a target location."
+            },
+            {
+                "name": "Knock-upHigh Mobility",
+                "details": "Q (Deceive) provides a short-range blink and invisibility, allowing for high mobility for engagements, escapes, and repositioning."
+            }
+        ]
+    },
+    {
+        "name": "Shen",
+        "archetype": "Warden",
+        "primary_position": [
+            "Top",
+            "Support"
+        ],
+        "mechanics": [
+            {
+                "name": "Shielding",
+                "details": "P (Ki Barrier) grants Shen a shield after casting an ability. R (Stand United) grants a significant shield to an allied champion."
+            },
+            {
+                "name": "Anti-Auto Attack",
+                "details": "W (Spirit's Refuge) creates a zone that blocks all basic attacks against Shen and his allies within it."
+            }
+        ]
+    },
+    {
+        "name": "Shyvana",
+        "archetype": "Diver",
+        "primary_position": [
+            "Jungle",
+            "Top"
+        ],
+        "mechanics": [
+            {
+                "name": "Knock-upHigh Mobility",
+                "details": "R (Dragon's Descent) allows Shyvana to transform into a dragon and fly to a target location, knocking enemies along her path and providing a significant mobility tool for engaging."
+            }
+        ]
+    },
+    {
+        "name": "Singed",
+        "archetype": "Juggernaut",
+        "primary_position": [
+            "Top"
+        ],
+        "mechanics": [
+            {
+                "name": "Anti-Dash",
+                "details": "W (Mega Adhesive) applies Grounding to enemies in the area, preventing them from using movement abilities."
+            },
+            {
+                "name": "Grievous Wounds",
+                "details": "R (Insanity Potion) causes Singed's Poison Trail (Q) to apply Grievous Wounds to enemies hit."
+            },
+            {
+                "name": "Knock-upHigh Mobility",
+                "details": "E (Fling) flings an enemy over Singed's shoulder, which is a knock-up effect."
+            }
+        ]
+    },
+    {
+        "name": "Sion",
+        "archetype": "Juggernaut",
+        "primary_position": [
+            "Top"
+        ],
+        "mechanics": [
+            {
+                "name": "Shielding",
+                "details": "W (Soul Furnace) grants Sion a shield for 6 seconds, which can be detonated for damage."
+            },
+            {
+                "name": "Unstoppable",
+                "details": "R (Unstoppable Onslaught) makes Sion immune to Crowd Control during its charge."
+            }
+        ]
+    },
+    {
+        "name": "Sivir",
+        "archetype": "Marksman",
+        "primary_position": [
+            "Bot"
+        ],
+        "mechanics": []
+    },
+    {
+        "name": "Skarner",
+        "archetype": "Vanguard",
+        "primary_position": [
+            "Jungle",
+            "Top"
+        ],
+        "mechanics": [
+            {
+                "name": "Shielding",
+                "details": "W (Crystalline Exoskeleton) grants Skarner a shield, increasing his durability and movement speed."
+            }
+        ]
+    },
+    {
+        "name": "Sona",
+        "archetype": "Enchanter",
+        "primary_position": [
+            "Support"
+        ],
+        "mechanics": [
+            {
+                "name": "High Sustain",
+                "details": "W (Aria of Perseverance) actively heals Sona and a nearby wounded ally, making her kit revolve around consistent healing."
+            },
+            {
+                "name": "Shielding",
+                "details": "W (Aria of Perseverance) grants allied champions a temporary shield when they are tagged by its aura."
+            }
+        ]
+    },
+    {
+        "name": "Soraka",
+        "archetype": "Enchanter",
+        "primary_position": [
+            "Support"
+        ],
+        "mechanics": [
+            {
+                "name": "High Sustain",
+                "details": "W (Astral Infusion) sacrifices Soraka's health to heal an allied champion, and R (Wish) globally heals all allied champions. Q (Starcall) heals Soraka herself."
+            }
+        ]
+    },
+    {
+        "name": "Swain",
+        "archetype": "Battlemage",
+        "primary_position": [
+            "Mid",
+            "Support",
+            "Top"
+        ],
+        "mechanics": [
+            {
+                "name": "High Sustain",
+                "details": "Passive (Ravenous Flock) collects Soul Fragments that heal Swain and permanently increase his maximum health. R (Demonic Ascension) drains health from nearby enemies, healing Swain significantly."
+            },
+            {
+                "name": "True Sight",
+                "details": "W (Vision of Empire) reveals champions hit for several seconds."
+            }
+        ]
+    },
+    {
+        "name": "Sylas",
+        "archetype": "Battlemage",
+        "primary_position": [
+            "Mid",
+            "Jungle",
+            "Top"
+        ],
+        "mechanics": [
+            {
+                "name": "High Sustain",
+                "details": "W (Kingslayer) heals Sylas for a significant amount based on his missing health when used against enemy champions."
+            },
+            {
+                "name": "Knock-upHigh Mobility",
+                "details": "E (Abscond / Abduct) allows Sylas to dash and then recast to throw chains, pulling himself to an enemy and knocking them up, providing both mobility and crowd control."
+            }
+        ]
+    },
+    {
+        "name": "Syndra",
+        "archetype": "Burst",
+        "primary_position": [
+            "Mid"
+        ],
+        "mechanics": []
+    },
+    {
+        "name": "Tahm Kench",
+        "archetype": "Warden",
+        "primary_position": [
+            "Support",
+            "Top"
+        ],
+        "mechanics": [
+            {
+                "name": "High Sustain",
+                "details": "Q (Tongue Lash) heals Tahm Kench when it hits an enemy champion. E (Thick Skin) passively stores damage taken, converting it into healing when out of combat."
+            },
+            {
+                "name": "Shielding",
+                "details": "E (Thick Skin) active converts all stored damage into a temporary shield. R (Devour) grants a shield to devoured allied champions."
+            },
+            {
+                "name": "Knock-upHigh Mobility",
+                "details": "W (Abyssal Dive) causes Tahm Kench to dive and re-appear, knocking up all enemies in the target area."
+            },
+            {
+                "name": "Anti-Dash",
+                "details": "R (Devour) applies a Grounded effect to devoured enemy champions, preventing them from using movement abilities."
+            }
+        ]
+    },
+    {
+        "name": "Taliyah",
+        "archetype": "Artillery",
+        "primary_position": [
+            "Jungle",
+            "Mid"
+        ],
+        "mechanics": [
+            {
+                "name": "Knock-upHigh Mobility",
+                "details": "W (Seismic Shove) knocks enemies back in a chosen direction. Passive (Rock Surfing) grants increased movement speed near walls. R (Weaver's Wall) allows Taliyah to ride a massive earthen wall for long-distance travel."
+            },
+            {
+                "name": "Anti-Dash",
+                "details": "E (Unraveled Earth) detonates and deals damage when enemies dash or are knocked through the scattered stones."
+            }
+        ]
+    },
+    {
+        "name": "Talon",
+        "archetype": "Burst",
+        "primary_position": [
+            "Mid",
+            "Jungle"
+        ],
+        "mechanics": [
+            {
+                "name": "High Sustain",
+                "details": "Q (Noxian Diplomacy) restores health and refunds cooldown if it kills the target."
+            },
+            {
+                "name": "Knock-upHigh Mobility",
+                "details": "E (Assassin's Path) allows Talon to vault over any terrain or structure. R (Shadow Assault) grants increased movement speed upon activation."
+            },
+            {
+                "name": "Invisibility",
+                "details": "R (Shadow Assault) makes Talon invisible for a short duration."
+            }
+        ]
+    },
+    {
+        "name": "Taric",
+        "archetype": "Warden",
+        "primary_position": [
+            "Support"
+        ],
+        "mechanics": [
+            {
+                "name": "High Sustain",
+                "details": "Q (Starlight's Touch) heals nearby allied champions based on charges stored, which are gained from basic attacks."
+            },
+            {
+                "name": "Shielding",
+                "details": "W (Bastion) actively shields an allied champion for a duration, based on Taric's maximum Health."
+            }
+        ]
+    },
+    {
+        "name": "Teemo",
+        "archetype": "Artillery",
+        "primary_position": [
+            "Top"
+        ],
+        "mechanics": [
+            {
+                "name": "Invisibility",
+                "details": "Passive (Guerrilla Warfare) makes Teemo invisible if he stands still for a short duration, or while moving in brush."
+            },
+            {
+                "name": "Knock-upHigh Mobility",
+                "details": "W (Move Quick) passively grants bonus movement speed and can be activated for a larger, temporary burst of movement speed that is not lost when struck."
+            },
+            {
+                "name": "Anti-Auto Attack",
+                "details": "Q (Blinding Dart) blinds the target, causing their auto-attacks to miss for a short duration."
+            }
+        ]
+    },
+    {
+        "name": "Thresh",
+        "archetype": "Catcher",
+        "primary_position": [
+            "Support"
+        ],
+        "mechanics": [
+            {
+                "name": "True Sight",
+                "details": "Q (Death Sentence) grants True Sight on the first unit hit for its duration."
+            },
+            {
+                "name": "Shielding",
+                "details": "W (Dark Passage) throws a lantern that shields Thresh and an allied champion."
+            },
+            {
+                "name": "Anti-Dash",
+                "details": "E (Flay) sweeps enemies, displacing them and interrupting dashes."
+            }
+        ]
+    },
+    {
+        "name": "Tristana",
+        "archetype": "Marksman",
+        "primary_position": [
+            "Bot",
+            "Mid"
+        ],
+        "mechanics": [
+            {
+                "name": "Knock-upHigh Mobility",
+                "details": "W (Rocket Jump) allows Tristana to leap to a location, resetting its cooldown on champion takedowns or max stack Explosive Charge detonations, providing high mobility in fights. R (Buster Shot) knocks back the target and surrounding enemies."
+            }
+        ]
+    },
+    {
+        "name": "Trundle",
+        "archetype": "Juggernaut",
+        "primary_position": [
+            "Jungle",
+            "Top"
+        ],
+        "mechanics": [
+            {
+                "name": "High Sustain",
+                "details": "Passive (King's Tribute) heals Trundle when enemy units die nearby. W (Frozen Domain) significantly increases all healing Trundle receives while inside the zone."
+            },
+            {
+                "name": "Anti-Auto Attack",
+                "details": "Q (Chomp) saps a portion of the target's Attack Damage for a short duration, reducing their physical damage output."
+            }
+        ]
+    },
+    {
+        "name": "Tryndamere",
+        "archetype": "Juggernaut",
+        "primary_position": [
+            "Top",
+            "Jungle"
+        ],
+        "mechanics": [
+            {
+                "name": "High Sustain",
+                "details": "Q (Bloodlust) allows Tryndamere to consume Fury to restore a significant amount of his Health."
+            },
+            {
+                "name": "Knock-upHigh Mobility",
+                "details": "E (Spinning Slash) is a dash whose cooldown is significantly reduced by critical strikes, allowing for frequent repositioning in combat."
+            }
+        ]
+    },
+    {
+        "name": "Twisted Fate",
+        "archetype": "Catcher",
+        "primary_position": [
+            "Mid"
+        ],
+        "mechanics": [
+            {
+                "name": "True Sight",
+                "details": "R (Destiny) grants True Sight of all enemy champions on the map."
+            }
+        ]
+    },
+    {
+        "name": "Twitch",
+        "archetype": "Marksman",
+        "primary_position": [
+            "Bot",
+            "Jungle"
+        ],
+        "mechanics": [
+            {
+                "name": "Invisibility",
+                "details": "Q (Ambush) makes Twitch Camouflaged for a short duration, allowing him to reposition or initiate ganks unseen."
+            }
+        ]
+    },
+    {
+        "name": "Udyr",
+        "archetype": "Juggernaut",
+        "primary_position": [
+            "Jungle",
+            "Top"
+        ],
+        "mechanics": [
+            {
+                "name": "Shielding",
+                "details": "W (Turtle Stance) grants Udyr a temporary shield."
+            },
+            {
+                "name": "High Sustain",
+                "details": "W (Turtle Stance) heals Udyr for a percentage of his maximum health on every third attack."
+            },
+            {
+                "name": "Knock-upHigh Mobility",
+                "details": "E (Bear Stance) grants a burst of movement speed, and his passive (Monkey's Agility) provides stacking movement speed after using abilities, allowing him to run down targets."
+            }
+        ]
+    },
+    {
+        "name": "Urgot",
+        "archetype": "Juggernaut",
+        "primary_position": [
+            "Top"
+        ],
+        "mechanics": []
+    },
+    {
+        "name": "Varus",
+        "archetype": "Artillery",
+        "primary_position": [
+            "Bot"
+        ],
+        "mechanics": [
+            {
+                "name": "Grievous Wounds",
+                "details": "E (Hail of Arrows) applies 40% Grievous Wounds to enemies in the desecrated area, reducing their healing and regeneration."
+            }
+        ]
+    },
+    {
+        "name": "Vayne",
+        "archetype": "Marksman",
+        "primary_position": [
+            "Bot",
+            "Top"
+        ],
+        "mechanics": [
+            {
+                "name": "Invisibility",
+                "details": "R (Final Hour) empowers Q (Tumble) to grant Invisibility for a short duration."
+            },
+            {
+                "name": "Knock-upHigh Mobility",
+                "details": "Q (Tumble) provides a short dash, and R (Final Hour) reduces its cooldown. Passive (Night Hunter) grants bonus movement speed towards enemy champions, which is further amplified during R (Final Hour)."
+            }
+        ]
+    },
+    {
+        "name": "Veigar",
+        "archetype": "Burst",
+        "primary_position": [
+            "Mid"
+        ],
+        "mechanics": []
+    },
+    {
+        "name": "Vel'Koz",
+        "archetype": "Artillery",
+        "primary_position": [
+            "Mid",
+            "Support"
+        ],
+        "mechanics": [
+            {
+                "name": "Knock-upHigh Mobility",
+                "details": "E (Tectonic Disruption) causes an area to explode, knocking up enemies."
+            }
+        ]
+    },
+    {
+        "name": "Vex",
+        "archetype": "Burst",
+        "primary_position": [
+            "Mid"
+        ],
+        "mechanics": [
+            {
+                "name": "Anti-Dash",
+                "details": "Passive (Doom 'n Gloom) causes her next basic ability to interrupt dashes."
+            },
+            {
+                "name": "Shielding",
+                "details": "W (Personal Space) grants Vex a shield."
+            }
+        ]
+    },
+    {
+        "name": "Vi",
+        "archetype": "Diver",
+        "primary_position": [
+            "Jungle"
+        ],
+        "mechanics": [
+            {
+                "name": "Knock-upHigh Mobility",
+                "details": "Q (Vault Breaker) is a charging dash that knocks back the first enemy champion hit. R (Cease and Desist) is a targeted dash that knocks up the primary target and knocks aside secondary targets."
+            },
+            {
+                "name": "Unstoppable",
+                "details": "R (Cease and Desist) makes Vi unstoppable while she dashes towards her target."
+            }
+        ]
+    },
+    {
+        "name": "Viego",
+        "archetype": "Diver",
+        "primary_position": [
+            "Jungle"
+        ],
+        "mechanics": [
+            {
+                "name": "High Sustain",
+                "details": "Passive (Sovereign's Domination) heals Viego upon possessing an enemy champion. Q (Blade of the Ruined King) passively heals Viego for a percentage of damage dealt on his second attack against an enemy."
+            },
+            {
+                "name": "Invisibility",
+                "details": "E (Harrowed Path) grants Viego Camouflage while inside the Black Mist."
+            },
+            {
+                "name": "Knock-upHigh Mobility",
+                "details": "W (Spectral Maw) allows Viego to dash forward. E (Harrowed Path) grants Viego increased movement speed while inside the Black Mist. R (Heartbreaker) knocks back nearby enemies upon Viego's arrival."
+            }
+        ]
+    },
+    {
+        "name": "Viktor",
+        "archetype": "Battlemage",
+        "primary_position": [
+            "Mid"
+        ],
+        "mechanics": [
+            {
+                "name": "Shielding",
+                "details": "Q (Siphon Power) grants Viktor a shield upon casting."
+            }
+        ]
+    },
+    {
+        "name": "Vladimir",
+        "archetype": "Battlemage",
+        "primary_position": [
+            "Mid",
+            "Top"
+        ],
+        "mechanics": [
+            {
+                "name": "High Sustain",
+                "details": "Q (Transfusion) heals Vladimir on hit, with an empowered version providing significantly more healing. R (Hemoplague) heals Vladimir for each enemy champion hit upon detonation."
+            },
+            {
+                "name": "Projectile Block",
+                "details": "W (Sanguine Pool) makes Vladimir untargetable and 'pops incoming missiles' in the pool area."
+            }
+        ]
+    },
+    {
+        "name": "Volibear",
+        "archetype": "Juggernaut",
+        "primary_position": [
+            "Jungle",
+            "Top"
+        ],
+        "mechanics": [
+            {
+                "name": "High Sustain",
+                "details": "W (Frenzied Maul) heals Volibear significantly when cast a second time on a marked target, scaling with his missing health."
+            },
+            {
+                "name": "Shielding",
+                "details": "E (Sky Splitter) grants Volibear a shield if he is within the lightning strike's blast radius."
+            },
+            {
+                "name": "Unstoppable",
+                "details": "R (Stormbringer) makes Volibear Unstoppable during his leap."
+            }
+        ]
+    },
+    {
+        "name": "Warwick",
+        "archetype": "Diver",
+        "primary_position": [
+            "Jungle",
+            "Top"
+        ],
+        "mechanics": [
+            {
+                "name": "High Sustain",
+                "details": "Passive (Eternal Hunger) causes basic attacks to heal Warwick, tripling at low health. Q (Jaws of the Beast) heals for a percentage of damage dealt. R (Infinite Duress) heals for 100% of damage dealt during the channel."
+            },
+            {
+                "name": "True Sight",
+                "details": "W (Blood Hunt) passively senses champions below 50% health, and its active can briefly sense all enemies, revealing them regardless of invisibility."
+            }
+        ]
+    },
+    {
+        "name": "Xayah",
+        "archetype": "Marksman",
+        "primary_position": [
+            "Bot"
+        ],
+        "mechanics": []
+    },
+    {
+        "name": "Xerath",
+        "archetype": "Artillery",
+        "primary_position": [
+            "Mid",
+            "Support"
+        ],
+        "mechanics": []
+    },
+    {
+        "name": "Xin Zhao",
+        "archetype": "Diver",
+        "primary_position": [
+            "Jungle",
+            "Top"
+        ],
+        "mechanics": [
+            {
+                "name": "High Sustain",
+                "details": "Passive (Determination) heals Xin Zhao on every third attack, providing significant sustain in fights and jungle clearing."
+            },
+            {
+                "name": "Knock-upHigh Mobility",
+                "details": "Q (Three Talon Strike) knocks up the target on the third hit. E (Audacious Charge) is a targeted dash that allows Xin Zhao to quickly engage enemies. R (Crescent Guard) knocks back non-challenged enemies."
+            }
+        ]
+    },
+    {
+        "name": "Yasuo",
+        "archetype": "Diver",
+        "primary_position": [
+            "Mid",
+            "Top"
+        ],
+        "mechanics": [
+            {
+                "name": "Projectile Block",
+                "details": "W (Wind Wall) creates a moving wall that blocks all enemy projectiles for 4 seconds."
+            },
+            {
+                "name": "Shielding",
+                "details": "Passive (Way of the Wanderer) grants a shield whenever Yasuo is moving, which triggers when he takes damage from a champion or monster."
+            },
+            {
+                "name": "Knock-upHigh Mobility",
+                "details": "Q (Steel Tempest) at 2 stacks fires a whirlwind that knocks enemies Airborne. E (Sweeping Blade) allows Yasuo to dash through enemies with a very low cooldown, providing high mobility. R (Last Breath) blinks to an Airborne enemy, extending the knock-up duration."
+            }
+        ]
+    },
+    {
+        "name": "Yone",
+        "archetype": "Diver",
+        "primary_position": [
+            "Mid",
+            "Top"
+        ],
+        "mechanics": [
+            {
+                "name": "Knock-upHigh Mobility",
+                "details": "Q (Mortal Steel) at two stacks dashes Yone forward, knocking enemies airborne. E (Soul Unbound) allows Yone to leave his body, gaining movement speed and returning to his body, providing high mobility and a safe escape. R (Fate Sealed) causes Yone to dash and knock up enemies, pulling them towards him."
+            },
+            {
+                "name": "Shielding",
+                "details": "W (Spirit Cleave) grants Yone a shield, which increases in value for each champion hit."
+            }
+        ]
+    },
+    {
+        "name": "Yorick",
+        "archetype": "Juggernaut",
+        "primary_position": [
+            "Top"
+        ],
+        "mechanics": [
+            {
+                "name": "High Sustain",
+                "details": "Q (Last Rites) heals Yorick on hit, with increased healing when he is below 50% Health, allowing for consistent lane sustain."
+            }
+        ]
+    },
+    {
+        "name": "Yuumi",
+        "archetype": "Enchanter",
+        "primary_position": [
+            "Support"
+        ],
+        "mechanics": [
+            {
+                "name": "Shielding",
+                "details": "Passive (Bop 'n' Block) periodically grants Yuumi a shield that protects her and her attached ally."
+            },
+            {
+                "name": "High Sustain",
+                "details": "E (Zoomies) heals Yuumi or her attached ally, providing significant health regeneration."
+            }
+        ]
+    },
+    {
+        "name": "Zac",
+        "archetype": "Vanguard",
+        "primary_position": [
+            "Jungle",
+            "Top"
+        ],
+        "mechanics": [
+            {
+                "name": "High Sustain",
+                "details": "Passive (Cell Division) allows Zac to restore health by picking up goo chunks shed from his abilities. Upon taking fatal damage, he splits into 4 bloblets that can recombine to revive him."
+            }
+        ]
+    },
+    {
+        "name": "Zed",
+        "archetype": "Burst",
+        "primary_position": [
+            "Mid"
+        ],
+        "mechanics": [
+            {
+                "name": "Knock-upHigh Mobility",
+                "details": "W (Living Shadow) allows Zed to dash and swap positions with his shadow, providing significant mobility for engages, escapes, and repositioning. R (Death Mark) also involves a dash and leaves a shadow for repositioning."
+            }
+        ]
+    },
+    {
+        "name": "Zeri",
+        "archetype": "Marksman",
+        "primary_position": [
+            "Bot"
+        ],
+        "mechanics": [
+            {
+                "name": "Shield Reave",
+                "details": "Passive (Living Battery) allows Zeri to absorb energy and shield herself when she damages an enemy shield."
+            },
+            {
+                "name": "Shielding",
+                "details": "Passive (Living Battery) causes Zeri to shield herself when she damages an enemy shield."
+            },
+            {
+                "name": "Knock-upHigh Mobility",
+                "details": "E (Spark Surge) is a dash that can vault over terrain and has its cooldown reduced by hitting champions. R (Lightning Crash) grants stacking Move Speed upon hitting enemy champions, contributing to high mobility."
+            }
+        ]
+    },
+    {
+        "name": "Ziggs",
+        "archetype": "Artillery",
+        "primary_position": [
+            "Mid",
+            "Bot"
+        ],
+        "mechanics": []
+    },
+    {
+        "name": "Zilean",
+        "archetype": "Catcher",
+        "primary_position": [
+            "Support"
+        ],
+        "mechanics": [
+            {
+                "name": "Knock-upHigh Mobility",
+                "details": "E (Time Warp) grants a significant movement speed buff to an allied champion or himself, which can be refreshed quickly with W (Rewind)."
+            }
+        ]
+    },
+    {
+        "name": "Zoe",
+        "archetype": "Burst",
+        "primary_position": [
+            "Mid"
+        ],
+        "mechanics": []
+    },
+    {
+        "name": "Zyra",
+        "archetype": "Catcher",
+        "primary_position": [
+            "Support",
+            "Mid"
+        ],
+        "mechanics": [
+            {
+                "name": "True Sight",
+                "details": "W (Rampant Growth) seeds grant True Sight of enemy champions that step on them."
+            }
+        ]
+    }
+]
