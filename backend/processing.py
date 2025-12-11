@@ -1,7 +1,7 @@
 import json
 import os
 from dotenv import load_dotenv
-from schemas import ChampionNode
+from backend.schemas import ChampionNode
 from google import genai
 import time
 from google.genai.errors import ServerError

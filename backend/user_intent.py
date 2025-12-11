@@ -1,6 +1,6 @@
 from pydantic import BaseModel, Field
 from typing import Optional, Literal, Union
-from schemas import StrategicMechanic, ValidArchetype, ValidPosition
+from backend.schemas import StrategicMechanic, ValidArchetype, ValidPosition
 
 class CounterPick(BaseModel):
     intent_type: Literal['counter_pick']

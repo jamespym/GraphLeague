@@ -1,4 +1,6 @@
 import json
+### DEAD FILE ###
+
 
 with open('backend/champions.json', 'r', encoding='utf-8') as f:
     raw_data = json.load(f)

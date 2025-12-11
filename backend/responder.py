@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 from google import genai
 import time
 from google.genai.errors import ServerError
-import user_intent
+from backend import user_intent
 
 load_dotenv()
 
