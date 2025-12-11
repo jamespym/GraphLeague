@@ -57,7 +57,7 @@ ARCHETYPE_RULES = {
     "Vanguard":   [
         {"target": "Enchanter", "reason": "Hard engage locks down squishies"},
         {"target": "Artillery", "reason": "Hard engage catches immobile poke"},
-        {"target": "Marksman", "reason": "Hard engage catches immobile poke"}
+        {"target": "Marksman", "reason": "Hard engage catches immobile ADCs"}
     ],
     "Catcher":    [
         {"target": "Enchanter", "reason": "CC setup sets up kill on squishy"},

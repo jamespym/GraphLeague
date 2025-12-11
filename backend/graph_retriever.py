@@ -88,7 +88,7 @@ class GraphRetriever:
                 WHERE ($myLane IS NULL OR $myLane = "" OR EXISTS { (c)-[:PLAYS_IN]->(:Role {name: $myLane}) })
                 
                 // FIX 2: Return 'r.description' (The Edge), NOT 'm.description' (The Node)
-                RETURN c.name AS Champion, r.description AS Tool
+                RETURN c.name AS Champion, [r.description] AS Reasoning
                 ORDER BY c.name ASC
                 LIMIT 5
                 """
@@ -106,7 +106,7 @@ class GraphRetriever:
                 // Lane Filter
                 WHERE ($myLane IS NULL OR $myLane = "" OR EXISTS { (c)-[:PLAYS_IN]->(:Role {name: $myLane}) })
                 
-                RETURN c.name AS Champion, counterClass.name AS Class, r.reason AS Reason
+                RETURN c.name AS Champion, counterClass.name AS Class, [r.reason] AS Reasoning
                 ORDER BY c.name ASC
                 LIMIT 5
                 """
