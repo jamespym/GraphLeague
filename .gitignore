@@ -10,3 +10,6 @@ graph_nodes.csv
 .env
 __pycache__/
 *.pyc
+processed_champions_v2.json
+processed_champions_v3.json
+processed_champions_v4.json
