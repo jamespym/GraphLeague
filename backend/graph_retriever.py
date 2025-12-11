@@ -20,7 +20,7 @@ class GraphRetriever:
     def close(self):
         self.driver.close()
         
-    def get_counter_picks(self, enemy_name, position=None, limit=3):
+    def get_counter_picks(self, enemy_name, position=None, limit=2):
         query = """
                 MATCH (enemy:Champion {name: $enemyName})
                 MATCH (me:Champion)
@@ -134,25 +134,35 @@ class Switchboard:
         """
     
     def classify_intent(self, user_query: str):
-        try:
-            response = self.model.models.generate_content(
-                model="gemini-2.5-flash",
-                contents=f"{self.system_prompt}\n\nUser Query: {user_query}",
-                config={
-                "response_mime_type": "application/json",
-                "response_schema": user_intent.Router, 
-                "temperature": 0.3,
-                }
-            )
-            json_data = json.loads(response.text)
-            return user_intent.Router(**json_data).choice
-        
-        except Exception as e:
-            print(f"ROUTING ERROR: {e}")
-            return user_intent.UnknownIntent(
-                intent_type="unknown", 
-                reason="System Error during routing"
-            )
+        max_retries = 3
+        base_delay = 1
+        for attempt in range(max_retries):
+            try:
+                response = self.model.models.generate_content(
+                    model="gemini-2.5-flash",
+                    contents=f"{self.system_prompt}\n\nUser Query: {user_query}",
+                    config={
+                    "response_mime_type": "application/json",
+                    "response_schema": user_intent.Router, 
+                    "temperature": 0.3,
+                    }
+                )
+                json_data = json.loads(response.text)
+                return user_intent.Router(**json_data).choice
+            
+            except ServerError as e:
+                # 2. Catch ONLY the 503 (Server Error)
+                print(f"Server overloaded (Attempt {attempt + 1}/{max_retries})...")
+                
+                # 3. Wait longer each time (2s, 4s, 8s)
+                sleep_time = base_delay * (2 ** attempt) 
+                print(f"Retrying in {sleep_time} seconds...")
+                time.sleep(sleep_time)
+                    
+            except Exception as e:
+                # 4. If it's a 400 error (Invalid Prompt), don't retry. It won't fix itself.
+                print(f"Critical API Error: {e}")
+                break
 
     def handle_query(self, user_query, graph_retriever):
         intent = self.classify_intent(user_query)
@@ -198,12 +208,11 @@ class Switchboard:
                 return "I understood the words, but I don't have a handler for that specific action yet."
 
         return graph_data, context_str
-       
+    
 # test = GraphRetriever()
 # #print(test.get_archetype_counters("Diver", position='Mid'))
 # print(test.find_mechanic_holders("High Sustain", position='Mid'))     
-            
-
+      
 # --- SIMPLE TEST BLOCK ---
 if __name__ == "__main__":
     # 1. Initialize
@@ -216,7 +225,7 @@ if __name__ == "__main__":
 
     # 2. Define Test Cases covering all 3 major intents
     test_queries = [
-        "Who counters Yasuo mid?",                      # CounterPick
+        "who counters vladimir top?",
         "Which supports have anti-heal?",               # MechanicSearch + Position
         "Best picks into Divers top lane?",              # ArchetypeCounters + Position
         "Who counters lots of dashes in middle?",                      # MechanicSearch (Synonym Mapping)
@@ -237,7 +246,7 @@ if __name__ == "__main__":
             if data:
                 print(f"Graph Data Found: {len(data)} records")
                 # Print first result to verify structure
-                print(f"Sample: {data[0]}") 
+                print(f"Sample: {data}") 
             else:
                 print("Graph Data: [] (Empty or Error)")
                 
@@ -247,3 +256,4 @@ if __name__ == "__main__":
     finally:
         print("\nClosing database connection...")
         graph.close()
+        
