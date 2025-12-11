@@ -118,23 +118,18 @@ class GraphRetriever:
         
 class Switchboard:
     def __init__(self):
-    
         self.model = genai.Client()
-        
-        # 2. The Prompt is now much simpler. 
-        # We don't need to explain the JSON structure or list valid literals manually.
-        # The 'response_schema' handles strict enums automatically.
         self.system_prompt = """
         You are the Intent Classifier for a League of Legends strategy tool.
         Analyze the user's query and route it to the correct intent object.
-        
+        - Always give Champion names in Proper Casing. Example: Irelia, Poppy, Ashe
         - Map synonyms for mechanics (e.g. "Anti-Heal" -> "Grievous Wounds").
         - Map synonyms for lanes (e.g. "ADC" -> "Bot").
         - If the query is about skins, lore, or stats, choose UnknownIntent.
         """
     
     def classify_intent(self, user_query: str):
-        max_retries = 3
+        max_retries = 10
         base_delay = 1
         for attempt in range(max_retries):
             try:
@@ -151,16 +146,13 @@ class Switchboard:
                 return user_intent.Router(**json_data).choice
             
             except ServerError as e:
-                # 2. Catch ONLY the 503 (Server Error)
-                print(f"Server overloaded (Attempt {attempt + 1}/{max_retries})...")
+                #print(f"Server overloaded (Attempt {attempt + 1}/{max_retries})...")
                 
-                # 3. Wait longer each time (2s, 4s, 8s)
                 sleep_time = base_delay * (2 ** attempt) 
-                print(f"Retrying in {sleep_time} seconds...")
+                #print(f"Retrying in {sleep_time} seconds...")
                 time.sleep(sleep_time)
                     
             except Exception as e:
-                # 4. If it's a 400 error (Invalid Prompt), don't retry. It won't fix itself.
                 print(f"Critical API Error: {e}")
                 break
 
@@ -175,7 +167,7 @@ class Switchboard:
                 graph_data = graph_retriever.get_counter_picks(
                     enemy_name=intent.enemy_champion, 
                     position=intent.my_position, 
-                    limit=5
+                    limit=3
                 )
             # Case 2: Who has Anti Heal?
             case user_intent.MechanicSearch():
@@ -194,18 +186,18 @@ class Switchboard:
                 
                 graph_data = graph_retriever.get_archetype_counters(
                     target_archetype=intent.enemy_archetype,
-                    position=intent.my_position # Passed to new updated function
+                    position=intent.my_position
                 )
 
             # Case 4: Nonsense / Off-topic
             case user_intent.UnknownIntent():
                 print(f"⚠️ Unknown Intent: {intent.reason}")
-                return f"I can't answer that right now. {intent.reason}"
+                return "NA", "NA"
             
             # Fallback for safety
             case _:
                 print("⚠️ Error: Unrecognized intent type")
-                return "I understood the words, but I don't have a handler for that specific action yet."
+                return "NA", "NA"
 
         return graph_data, context_str
     

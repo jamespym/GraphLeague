@@ -21,6 +21,9 @@ def run_app():
         try:
             time.sleep(1)
             graph_data, context = sb.handle_query(user_query, graph)
+            if graph_data == "NA":
+                print("GraphLeague: I can't answer that right now.")
+                continue
             time.sleep(1)
             final_response = responder.generate_response(graph_data, context, user_query)
             print(f"GraphLeague: {final_response.text}")

@@ -14,40 +14,37 @@ class Responder:
         self.model = genai.Client()
         self.system_prompt = """
             You are a League of Legends coach.
-            TASK: Use the following information to advise the user. Give your answer in natural language.
+            TASK: Use ONLY the following information to advise the user. Adopt a professional and coaching tone.
+            IF the user query is an irrelevant topic, simply let the user know you are unable to proceed with his request.
+            IF Champion Information is an empty list, inform the user that what his requesting for does not exist, based on the information available.
             The original user query has been has been distilled to its intention. However, the original query is still attached for additional context.
-            
+            Do not include an intro, but do give a summary if helpful.
             Note: Archetype refers to the subclassses that Champions are divided into, e.g. Warden, Diver, Artillery
             """
         
     def generate_response(self, graph_data, context, user_query):
         # Configuration for retries
-        max_retries = 3
+        max_retries = 10
         base_delay = 1  # Start with 2 seconds
         
         for attempt in range(max_retries):
             try:
-                # 1. Attempt the generation
                 response = self.model.models.generate_content(
                     model="gemini-2.5-flash",
                     contents=f"{self.system_prompt}\n\nOriginal User Query:{user_query}\n\nContext:{context}\n\nChampion Information: {graph_data}",
                     config={
-                        "temperature": 0.3,
+                        "temperature": 0.2
                     }
                 )
                 return response
                 
             except ServerError as e:
-                # 2. Catch ONLY the 503 (Server Error)
-                print(f"Server overloaded (Attempt {attempt + 1}/{max_retries})...")
-                
-                # 3. Wait longer each time (2s, 4s, 8s)
+                #print(f"Server overloaded (Attempt {attempt + 1}/{max_retries})...")
                 sleep_time = base_delay * (2 ** attempt) 
-                print(f"Retrying in {sleep_time} seconds...")
+                #print(f"Retrying in {sleep_time} seconds...")
                 time.sleep(sleep_time)
                 
             except Exception as e:
-                # 4. If it's a 400 error (Invalid Prompt), don't retry. It won't fix itself.
                 print(f"Critical API Error: {e}")
                 break
                 
