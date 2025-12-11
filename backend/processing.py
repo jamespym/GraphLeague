@@ -38,6 +38,8 @@ logic_rules = """
             - Example: Lillia, Katarina are classic High Mobility. Aatrox is High Mobility as his abiliities require dash. Gwen is NOT High Mobility.
         10. "Shielding" -> IF champion heavily relies on shields.
             - Example: Karma is Shielding. Jarvan IV is NOT Shielding
+        11. "Projectile Reliant" -> IF champion's decisive and most important abilities are skillshots / projectiles
+            - Example: Ashe is Projectile Reliant as all her abilities are projectiles. Blitzcrank only has 1 projectile, but it is paramount to his kit. Thus he is Projectile Reliant.
         
         ARCHETYPE CLASSIFICATION RULES:
         - "Vanguard": Aggressive tanks with hard, offensive engage abilities (e.g., Leona, Malphite, Amumu).
@@ -135,82 +137,6 @@ for champion_id, champion_raw_data in input_json["data"].items():
             print(f"Validation Failed for {champion_id}: {e}")
             # Optional: print response.text to debug hallucination
     
-    time.sleep(0.5) # Rate limit politeness
+    time.sleep(0.5)
 
 print("Processing Complete.")
-
-
-"""
-# Load existing progress if file exists (so you don't restart from Aatrox)
-if os.path.exists(output_file_path):
-    with open(output_file_path, 'r', encoding='utf-8') as f:
-        try:
-            saved_data = json.load(f)
-            # Create a set of names we have already finished
-            processed_ids = {item['champion_name'] for item in saved_data} 
-            output_list = [ChampionGraphData(**item) for item in saved_data]
-            print(f"Loaded {len(output_list)} champions from previous run.")
-        except json.JSONDecodeError:
-            processed_ids = set()
-else:
-    processed_ids = set()
-
-for champion_id, champion_raw_data in input_json["data"].items():
-    
-    # SKIP logic: If we already have this champion, skip it
-    if champion_id in processed_ids: 
-        print(f"Skipping {champion_id} (already done)")
-        continue
-    
-    prompt = (
-        f"You are a League of Legends gameplay and interaction expert. Based on the following raw data and rules, extract the relationships into the required JSON schema, using only the provided vocabulary"
-        f"Champion raw data: {json.dumps(champion_raw_data)}"
-        f"{logic_rules}\n"
-        "Output valid JSON only. Do not output Python class constructors (e.g., do not write ChampionNode(...)). Output standard JSON objects (e.g., {'name': '...'})."
-    )
-
-    # --- RETRY LOGIC START ---
-    max_retries = 10
-    response = None
-    
-    for attempt in range(max_retries):
-        try:
-            response = client.models.generate_content(
-                model="gemini-2.5-flash", 
-                contents=prompt,
-                config={"response_mime_type": "application/json",
-                        "response_json_schema": ChampionGraphData.model_json_schema(),
-                        "temperature": 1.0
-                }
-            )
-            break # Success, exit retry loop
-        except ServerError as e:
-            if e.code == 503:
-                wait = (2 ** attempt) * 2 # Wait 2s, 4s, 8s...
-                print(f"API Overloaded on {champion_id}. Sleeping {wait}s...")
-                time.sleep(wait)
-            else:
-                print(f"Critical error on {champion_id}: {e}")
-                break
-    # --- RETRY LOGIC END ---
-    
-    if response:
-        try:
-            data = json.loads(response.text)
-            champion_obj = ChampionGraphData(**data)
-            output_list.append(champion_obj)
-            processed_ids.add(champion_id)
-            print(f"Successfully processed {champion_id}")
-            
-            # --- SAVE IMMEDIATELY ---
-            # This is slightly inefficient (rewriting file every time) but 
-            # 100% safe for your rush. If it crashes, you lose nothing.
-            with open(output_file_path, 'w', encoding='utf-8') as outfile:
-                json.dump([item.model_dump() for item in output_list], outfile, indent=4)
-                
-        except json.JSONDecodeError as e:
-            print(f"Failed to process {champion_id}. JSON Error.")
-    
-    time.sleep(1)
-"""        
-            

@@ -146,24 +146,39 @@ class GraphInserter:
                     """
                     MATCH (c:Champion {name: $name})
                     MERGE (m:Mechanic {name: $mech_name})
-                    MERGE (c)-[:HAS_MECHANIC]->(m)
-                    SET m.description = $details 
+                    
+                    // Capture the relationship in variable 'r'
+                    MERGE (c)-[r:HAS_MECHANIC]->(m)
+                    
+                    // Set the description on the RELATIONSHIP 'r', not the node 'm'
+                    SET r.description = $details 
                     """, 
                     name=champion_data['name'], mech_name=mech_name, details=mech['details'])
 
             # 4. Create Weakness Edges (Your existing Logic)
             for mech in champion_data['mechanics']:
                 mech_name = mech['name']
+                
+                # 1. Grab the detailed explanation from the JSON
+                mech_details = mech.get('details', '') 
+
                 if mech_name in LOGIC_RULES:
                     counter_mech = LOGIC_RULES[mech_name]
+                    
+                    # 2. Construct a "Rich Reason" string
+                    # Format: "Vulnerable to [Counter] due to [Trait]: [Specific Ability Details]"
+                    rich_reason = f"Vulnerable to {counter_mech} due to {mech_name}: {mech_details}"
+
                     session.run(
                         """
                         MATCH (c:Champion {name: $name})
                         MERGE (m:Mechanic {name: $counter_mech})
                         MERGE (c)-[:WEAK_TO {reason: $reason}]->(m)
                         """, 
-                        name=champion_data['name'], counter_mech=counter_mech, 
-                        reason=f"Weakness derived from having {mech_name}")
+                        name=champion_data['name'], 
+                        counter_mech=counter_mech, 
+                        reason=rich_reason
+                    )
         
 with open('backend/processed_champions_v4.json', 'r') as f:
     data = json.load(f)

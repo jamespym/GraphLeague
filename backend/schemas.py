@@ -15,6 +15,7 @@ StrategicMechanic = Literal[
     "Unstoppable",        # Olaf R
     "Cleanse",            # GP W, Milio R
     "Anti-Auto Attack",   # Shen W
+    "Projectile Reliant"
 ]
 
 ValidPosition = Literal["Top", "Jungle", "Mid", "Bot", "Support"]
