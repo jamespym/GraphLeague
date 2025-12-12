@@ -1,0 +1,7 @@
+pandas
+scikit-learn
+torch
+neo4j
+riotwatcher
+langchain
+pydantic

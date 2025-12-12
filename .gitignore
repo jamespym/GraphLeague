@@ -4,7 +4,6 @@ backend/champions.json
 backend/2025_LoL_esports_match_data_from_OraclesElixir.csv
 league_champion_adjacency.csv
 league_matchups_detailed.csv
-requirements.txt
 graph_edges.csv
 graph_nodes.csv
 .env
