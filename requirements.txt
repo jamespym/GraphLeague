@@ -1,7 +1,7 @@
 pandas
-scikit-learn
-torch
 neo4j
 riotwatcher
-langchain
+langgraph
 pydantic
+google-genai
+streamlit
