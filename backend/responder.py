@@ -23,9 +23,8 @@ class Responder:
             """
         
     def generate_response(self, graph_data, context, user_query):
-        # Configuration for retries
         max_retries = 10
-        base_delay = 1  # Start with 2 seconds
+        base_delay = 1
         
         for attempt in range(max_retries):
             try:

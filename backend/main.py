@@ -30,7 +30,6 @@ def run_app():
         except Exception as e:
             print(f"Error processing request: {e}")
 
-    # Cleanup
     graph.close()
 
 if __name__ == "__main__":

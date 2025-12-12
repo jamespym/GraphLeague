@@ -79,7 +79,7 @@ class GraphRetriever:
             return [record.data() for record in result]
     
     def find_mechanic_holders(self, mechanic_name, position=None):
-        # Finds all champions who HAVE a specific mechanic."""
+        # Finds all champions who HAVE a specific mechanic.
         query = """
                 // FIX 1: Add 'r' inside the brackets to capture the relationship variable
                 MATCH (c:Champion)-[r:HAS_MECHANIC]->(m:Mechanic {name: $mechName})
@@ -205,7 +205,7 @@ class Switchboard:
 # #print(test.get_archetype_counters("Diver", position='Mid'))
 # print(test.find_mechanic_holders("High Sustain", position='Mid'))     
       
-# --- SIMPLE TEST BLOCK ---
+# --- TEST BLOCK ---
 if __name__ == "__main__":
     # 1. Initialize
     print("Initializing services...")
@@ -215,30 +215,26 @@ if __name__ == "__main__":
     print("Services ready.\n")
 
 
-    # 2. Define Test Cases covering all 3 major intents
+    # testing
     test_queries = [
         "who counters vladimir top?",
-        "Which supports have anti-heal?",               # MechanicSearch + Position
-        "Best picks into Divers top lane?",              # ArchetypeCounters + Position
-        "Who counters lots of dashes in middle?",                      # MechanicSearch (Synonym Mapping)
-        "Tell me about Arcane lore"                     # UnknownIntent
+        "Which supports have anti-heal?",           
+        "Best picks into Divers top lane?",           
+        "Who counters lots of dashes in middle?",         
+        "Tell me about Arcane lore"          
     ]
     
-    # 3. Run Loop
     try:
         for q in test_queries:
             print("-" * 60)
             print(f"User Query: '{q}'")
             
-            # Execute logic
             data, context = sb.handle_query(q, graph)
             
-            # Print Output
             print(f"\nContext: {context}")
             if data:
                 print(f"Graph Data Found: {len(data)} records")
-                # Print first result to verify structure
-                print(f"Sample: {data}") 
+                print(f"Sample: {data[0]}") 
             else:
                 print("Graph Data: [] (Empty or Error)")
                 

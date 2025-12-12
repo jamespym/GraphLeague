@@ -86,13 +86,11 @@ class GraphInserter:
             session.run("CREATE CONSTRAINT IF NOT EXISTS FOR (a:Archetype) REQUIRE a.name IS UNIQUE")
             print("Constraints created.")
 
-    # --- NEW FUNCTION: Run this ONCE to build the logic graph ---
     def init_archetype_layer(self):
         """Builds the Rock-Paper-Scissors Logic layer."""
         print("Building Archetype Logic Layer...")
         with self.driver.session() as session:
             for source_class, targets in ARCHETYPE_RULES.items():
-                # 1. Ensure the Source Archetype exists
                 session.run("MERGE (:Archetype {name: $name})", name=source_class)
                 
                 for target in targets:
@@ -110,7 +108,7 @@ class GraphInserter:
 
     def load_champion(self, champion_data):
         with self.driver.session() as session:
-            # 1. Create Champion Node (Standard)
+            # 1. Create ChampionNode
             session.run(
                 """
                 MERGE (c:Champion {name: $name})
@@ -118,8 +116,7 @@ class GraphInserter:
                 """, 
                 name=champion_data['name'], archetype=champion_data['archetype'])
 
-            # --- NEW STEP: Link Champion to the Archetype Graph ---
-            # This connects "Zed" to the "Burst" node we created in init_archetype_layer
+            # Link Champion to Archetype
             session.run(
                 """
                 MATCH (c:Champion {name: $name})
@@ -129,7 +126,7 @@ class GraphInserter:
                 name=champion_data['name'], archetype=champion_data['archetype']
             )
 
-            # 2. Create Role Edges (No change)
+            # 2. Create Role Edges
             for role in champion_data['primary_position']:
                 session.run(
                     """
@@ -139,7 +136,7 @@ class GraphInserter:
                     """,
                     name=champion_data['name'], role=role)
 
-            # 3. Create Mechanic Edges (No change)
+            # 3. Create Mechanic Edges
             for mech in champion_data['mechanics']:
                 mech_name = mech['name'] 
                 session.run(
@@ -155,7 +152,7 @@ class GraphInserter:
                     """, 
                     name=champion_data['name'], mech_name=mech_name, details=mech['details'])
 
-            # 4. Create Weakness Edges (Your existing Logic)
+            # 4. Create Weakness Edges
             for mech in champion_data['mechanics']:
                 mech_name = mech['name']
                 
@@ -165,8 +162,7 @@ class GraphInserter:
                 if mech_name in LOGIC_RULES:
                     counter_mech = LOGIC_RULES[mech_name]
                     
-                    # 2. Construct a "Rich Reason" string
-                    # Format: "Vulnerable to [Counter] due to [Trait]: [Specific Ability Details]"
+                    # 2. Construct a reasoning string
                     rich_reason = f"Vulnerable to {counter_mech} due to {mech_name}: {mech_details}"
 
                     session.run(
@@ -188,10 +184,8 @@ if __name__ == "__main__":
     
     try:
         loader.create_constraints()
-        # --- NEW: Build the rules first ---
         loader.init_archetype_layer()
         
-        # Load Data
         INPUT_FILE = 'backend/processed_champions_v4.json'
         with open(INPUT_FILE, 'r', encoding='utf-8') as f:
             champions = json.load(f)

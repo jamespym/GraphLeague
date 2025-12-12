@@ -61,7 +61,6 @@ if os.path.exists(OUTPUT_FILE):
     with open(OUTPUT_FILE, 'r', encoding='utf-8') as f:
         try:
             saved_data = json.load(f)
-            # Re-hydrate the JSON into Pydantic objects to ensure validity
             output_list = [ChampionNode(**item) for item in saved_data]
             processed_ids = {item.name for item in output_list}
             print(f"Loaded {len(output_list)} champions from previous run.")
@@ -76,9 +75,7 @@ for champion_id, champion_raw_data in input_json["data"].items():
         
     print(f"Processing {champion_id}...")
 
-    # The Prompt Engineering
-    # We explicitly ask it to use internal knowledge for Positions, 
-    # but strictly follow the Raw Data for Mechanics.
+    # Prompt Engineering
     prompt = (
         f"You are a League of Legends expert. Extract data for '{champion_id}' into the required JSON schema.\n\n"
         f"RAW DATA: {json.dumps(champion_raw_data)}\n\n"
@@ -91,18 +88,17 @@ for champion_id, champion_raw_data in input_json["data"].items():
         "Output valid JSON matching the ChampionNode schema."
     )
 
-    # Retry Logic (Same as your old script, just cleaner)
     max_retries = 8
     response = None
     
     for attempt in range(max_retries):
         try:
             response = client.models.generate_content(
-                model="gemini-2.5-flash", # Use Flash for speed/cost, or Pro for precision
+                model="gemini-2.5-flash",
                 contents=prompt,
                 config={
                     "response_mime_type": "application/json",
-                    "response_schema": ChampionNode, # Enforce the new schema
+                    "response_schema": ChampionNode,
                     "temperature": 0.3
                 }
             )
@@ -118,24 +114,20 @@ for champion_id, champion_raw_data in input_json["data"].items():
     # Save & parsing
     if response and response.text:
         try:
-            # Pydantic automatic validation
-            # Gemini returns the object directly matching the schema
             data = json.loads(response.text)
             champion_node = ChampionNode(**data)
             
             output_list.append(champion_node)
             processed_ids.add(champion_id)
             
-            # Incremental Save
+            # Incremental save
             with open(OUTPUT_FILE, 'w', encoding='utf-8') as outfile:
-                # model_dump() converts Pydantic objects to pure Python dicts for JSON serialization
                 json.dump([node.model_dump() for node in output_list], outfile, indent=4)
             
             print(f"Processed successfully: {champion_id}", flush=True)
                 
         except Exception as e:
             print(f"Validation Failed for {champion_id}: {e}")
-            # Optional: print response.text to debug hallucination
     
     time.sleep(0.5)
 
