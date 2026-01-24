@@ -5,8 +5,8 @@ from dotenv import load_dotenv
 from schemas import ChampionNode
 
 load_dotenv()
-neo4j_uri = os.getenv("NEO4J_URI")
-neo4j_user = os.getenv("NEO4J_USER")
+neo4j_uri = os.getenv("NEO4J_URI", "bolt://neo4j:7687")
+neo4j_user = os.getenv("NEO4J_USER", "neo4j")
 neo4j_pw = os.getenv("NEO4J_PASSWORD")
 
 #print(neo4j_pw, neo4j_uri, neo4j_user)

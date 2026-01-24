@@ -6,9 +6,13 @@ league_champion_adjacency.csv
 league_matchups_detailed.csv
 graph_edges.csv
 graph_nodes.csv
-.env
+.env*
 __pycache__/
 *.pyc
 processed_champions_v2.json
 processed_champions_v3.json
 processed_champions_v4.json
+neo4j_data/
+docker-compose.override.yml
+!docker-compose.override.example.yml
+!.env.example
