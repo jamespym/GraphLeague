@@ -2,7 +2,7 @@ name: GraphLeague CI
 
 on:
   push:
-    branches: [ main ] # Or main
+    branches: [ main ]
 
 jobs:
   build-and-test:
@@ -28,8 +28,7 @@ jobs:
           NEO4J_URI: bolt://localhost:7687
           NEO4J_USER: neo4j
         run: |
-          # Use the libraries already inside the Runner's Python
-          # Install ONLY the ones needed for this script if it fails
-          pip install neo4j google-generativeai 
-          sleep 20
-          python backend/graph_builder.py
+            python -m pip install python-dotenv 
+            sleep 10
+            # 2. Call the script through the module runner
+            python -m backend.graph_builder
