@@ -37,4 +37,4 @@ This project uses GitHub Actions to automatically:
 
 1. Verify the Docker build.
 2. Test database authentication and seeding.
-3. Ensure Python syntax is correct. 
+3. Ensure Python syntax is correct.
