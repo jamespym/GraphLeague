@@ -2,7 +2,7 @@ name: GraphLeague CI
 
 on:
   push:
-    branches: [ master ] # Or main
+    branches: [ main ] # Or main
 
 jobs:
   build-and-test:
